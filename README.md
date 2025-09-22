@@ -1,4 +1,4 @@
-# camiones
+# Bitacora
 <img width="745" height="786" alt="Captura de pantalla 2025-09-22 103824" src="https://github.com/user-attachments/assets/6e945774-b6d7-49e6-851b-643b9f1e7543" />
 <img width="780" height="768" alt="Captura de pantalla 2025-09-22 103733" src="https://github.com/user-attachments/assets/a9519378-7a87-4102-9b4a-0713f53b98ec" />
 <img width="1309" height="862" alt="Captura de pantalla 2025-09-22 103912" src="https://github.com/user-attachments/assets/64faf1bd-ebac-49db-920c-481bc1917734" />
