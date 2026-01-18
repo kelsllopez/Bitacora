@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>505 - Página no encontrada</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Orbitron', sans-serif;
+    background-color: #0c0c1d;
+    color: #ffffff;
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.error-code {
+    font-size: 10rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    animation: glow 1.5s ease-in-out infinite alternate;
+}
+
+.zero {
+    color: #00ffff;
+}
+
+.error-message {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.description {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.buttons {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.btn {
+    padding: 12px 24px;
+    font-size: 1rem;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.btn-primary {
+    background-color: #00ffff;
+    color: #0c0c1d;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #00ffff;
+    border: 2px solid #00ffff;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+}
+
+.astronaut {
+    position: absolute;
+    width: 100px;
+    animation: float 6s ease-in-out infinite;
+}
+
+.astronaut-img {
+    width: 100%;
+    height: auto;
+}
+
+.ufo {
+    position: absolute;
+    width: 150px;
+    animation: fly 20s linear infinite;
+}
+
+.ufo-img {
+    width: 100%;
+    height: auto;
+}
+
+.tip {
+    margin-top: 20px;
+    font-style: italic;
+    color: #00ffff;
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 15px #00ffff, 0 0 20px #00ffff;
+    }
+    to {
+        text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff, 0 0 40px #00ffff;
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-20px) rotate(5deg);
+    }
+    100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+}
+
+@keyframes fly {
+    0% {
+        left: -150px;
+        top: 10%;
+    }
+    25% {
+        top: 20%;
+    }
+    50% {
+        top: 10%;
+    }
+    75% {
+        top: 25%;
+    }
+    100% {
+        left: 100%;
+        top: 10%;
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Estrellas de fondo */
+.stars, .twinkling, .clouds {
+    position: absolute;
+    display: block;
+    top: 0; bottom: 0;
+    left: 0; right: 0;
+    width: 100%; height: 100%;
+}
+
+.stars {
+    z-index: 0;
+    background: #000 url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png') repeat top center;
+}
+
+.twinkling {
+    z-index: 1;
+    background: transparent url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/twinkling.png') repeat top center;
+    animation: move-twink-back 200s linear infinite;
+}
+
+.clouds {
+    z-index: 2;
+    background: transparent url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/clouds_repeat.png') repeat top center;
+    animation: move-clouds-back 200s linear infinite;
+}
+
+@keyframes move-twink-back {
+    from {background-position: 0 0;}
+    to {background-position: -10000px 5000px;}
+}
+
+@keyframes move-clouds-back {
+    from {background-position: 0 0;}
+    to {background-position: 10000px 0;}
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .error-code {
+        font-size: 6rem;
+    }
+
+    .error-message {
+        font-size: 1.5rem;
+    }
+
+    .description {
+        font-size: 1rem;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+
+    .astronaut {
+        width: 80px;
+    }
+
+    .ufo {
+        width: 120px;
+    }
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="twinkling"></div>
+    <div class="clouds"></div>
+    
+    <main class="container">
+        <h1 class="error-code">5<span class="zero">0</span>5</h1>
+        <p class="error-message">¡Oops! Página no encontrada</p>
+        <p class="description">Parece que te has perdido en el ciberespacio.</p>
+        <div class="astronaut">
+            <img src="https://images.vexels.com/media/users/3/152639/isolated/preview/506b575739e90613428cdb399175e2c8-space-astronaut-cartoon-by-vexels.png" alt="Astronauta perdido en el espacio" class="astronaut-img">
+        </div>
+        <div class="ufo">
+            <img src="https://www.pssltda.cl/images/cliente3.png" alt="OVNI volando" class="ufo-img">
+        </div>
+        <p class="tip" id="tip">Consejo: Intenta no perderte en el espacio la próxima vez.</p>
+        <div class="buttons">
+            <a href="/" class="btn btn-primary">Volver a la Tierra (Inicio)</a>
+            <button onclick="location.reload()" class="btn btn-secondary">Intentar teletransportación</button>
+        </div>
+    </main>
+
+    <script>
+        const tips = [
+            "Consejo: Intenta no perderte en el espacio la próxima vez.",
+            "Consejo: ¿Has probado apagando y encendiendo el universo?",
+            "Consejo: Quizás esta página está en otra dimensión.",
+            "Consejo: Incluso los astronautas se pierden a veces.",
+            "Consejo: Houston, tenemos un problema con esta página."
+        ];
+
+        function changeTip() {
+            const tipElement = document.getElementById('tip');
+            tipElement.textContent = tips[Math.floor(Math.random() * tips.length)];
+            tipElement.classList.remove('fade-in');
+            void tipElement.offsetWidth; // Trigger reflow
+            tipElement.classList.add('fade-in');
+        }
+
+        setInterval(changeTip, 5000);
+    </script>
+</body>
+</html>
+

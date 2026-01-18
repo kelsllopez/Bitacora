@@ -1,0 +1,22 @@
+Authorization: Token 58126e9d4787d13300d7ee2ff0dd033be4e13ceb
+
+
+58126e9d4787d13300d7ee2ff0dd033be4e13ceb
+
+esta es para mis dos api 
+
+
+
+esto es lo que tengo que ingresar si quiero un token nuevo
+
+>>> from django.contrib.auth.models import User
+>>> from rest_framework.authtoken.models import Token
+
+>>> # Obtener el usuario por su nombre de usuario
+>>> user = User.objects.get(username='admin')
+
+>>> # Crear o obtener el token
+>>> token, created = Token.objects.get_or_create(user=user)
+
+>>> # Ver el token generado
+>>> print(token.key)

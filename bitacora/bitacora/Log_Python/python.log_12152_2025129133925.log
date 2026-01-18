@@ -1,0 +1,8 @@
+Performing system checks...
+
+System check identified no issues (0 silenced).
+January 29, 2025 - 10:39:30
+Django version 4.2.17, using settings 'bitacora.settings'
+Starting development server at http://127.0.0.1:20642/
+Quit the server with CTRL-BREAK.
+

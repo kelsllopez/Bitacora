@@ -1,0 +1,171 @@
+
+{% for bitacora in bitacoras %}
+<div class="modal fade" id="detalleModal{{ bitacora.id }}" tabindex="-1" aria-labelledby="detalleModalLabel{{ bitacora.id }}" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content border-0 shadow-lg">
+            <!-- Header con gradiente -->
+            <div class="modal-header border-0 bg-gradient text-dark" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                <h5 class="modal-title fw-bold" id="detalleModalLabel{{ bitacora.id }}">
+                    <i class="bi bi-file-text-fill me-2"></i>Detalles de la Visita
+                </h5>
+                <button type="button" class="btn-close btn-close-dark" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <!-- Body con Tabs -->
+            <div class="modal-body p-0">
+                <!-- Tabs Navigation -->
+                <ul class="nav nav-pills nav-fill p-3 bg-light border-bottom" id="detalleTabs{{ bitacora.id }}" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active tab-custom" id="visitante-tab-{{ bitacora.id }}" data-bs-toggle="pill" 
+                                data-bs-target="#visitante-{{ bitacora.id }}" type="button" role="tab">
+                            <i class="bi bi-person-fill me-2"></i>
+                            <span class="d-none d-md-inline">Visitante</span>
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link tab-custom" id="horario-tab-{{ bitacora.id }}" data-bs-toggle="pill" 
+                                data-bs-target="#horario-{{ bitacora.id }}" type="button" role="tab">
+                            <i class="bi bi-calendar-check me-2"></i>
+                            <span class="d-none d-md-inline">Fecha y Horario</span>
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link tab-custom" id="adicional-tab-{{ bitacora.id }}" data-bs-toggle="pill" 
+                                data-bs-target="#adicional-{{ bitacora.id }}" type="button" role="tab">
+                            <i class="bi bi-info-circle-fill me-2"></i>
+                            <span class="d-none d-md-inline">Información Adicional</span>
+                        </button>
+                    </li>
+                    {% if bitacora.observaciones %}
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link tab-custom" id="observaciones-tab-{{ bitacora.id }}" data-bs-toggle="pill" 
+                                data-bs-target="#observaciones-{{ bitacora.id }}" type="button" role="tab">
+                            <i class="bi bi-chat-left-text-fill me-2"></i>
+                            <span class="d-none d-md-inline">Observaciones</span>
+                        </button>
+                    </li>
+                    {% endif %}
+                </ul>
+
+                <div class="tab-content p-4" id="detalleTabContent{{ bitacora.id }}">
+                    
+                    <div class="tab-pane fade show active" id="visitante-{{ bitacora.id }}" role="tabpanel">
+                        
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <div class="detail-item-tab">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="bi bi-card-text text-primary fs-4 me-2"></i>
+                                        <label class="text-muted small mb-0 fw-bold">RUT</label>
+                                    </div>
+                                    <p class="mb-0 fw-semibold fs-5">{{ bitacora.rut }}</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="detail-item-tab">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="bi bi-person-badge text-primary fs-4 me-2"></i>
+                                        <label class="text-muted small mb-0 fw-bold">NOMBRE COMPLETO</label>
+                                    </div>
+                                    <p class="mb-0 fw-semibold fs-5">{{ bitacora.nombre_visitante }} {{ bitacora.apellido_paterno }} {{ bitacora.apellido_materno }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade" id="horario-{{ bitacora.id }}" role="tabpanel">
+                        
+                        <div class="row g-4">
+                            <div class="col-md-4">
+                                <div class="detail-item-tab">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="bi bi-calendar3 text-success fs-4 me-2"></i>
+                                        <label class="text-muted small mb-0 fw-bold">FECHA</label>
+                                    </div>
+                                    <p class="mb-0 fw-semibold fs-5">{{ bitacora.fecha|date:"d/m/Y" }}</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="detail-item-tab">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="bi bi-clock text-success fs-4 me-2"></i>
+                                        <label class="text-muted small mb-0 fw-bold">HORA ENTRADA</label>
+                                    </div>
+                                    <p class="mb-0 fw-bold fs-4 text-success">{{ bitacora.hora_entrada|time:"H:i" }}</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="detail-item-tab">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="bi bi-clock-fill text-danger fs-4 me-2"></i>
+                                        <label class="text-muted small mb-0 fw-bold">HORA SALIDA</label>
+                                    </div>
+                                    <p class="mb-0 fw-bold fs-4 text-danger">{{ bitacora.hora_salida|time:"H:i" }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade" id="adicional-{{ bitacora.id }}" role="tabpanel">
+                        
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <div class="detail-item-tab">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="bi bi-tag text-info fs-4 me-2"></i>
+                                        <label class="text-muted small mb-0 fw-bold">MODO DE VISITA</label>
+                                    </div>
+                                    <p class="mb-0 fw-semibold fs-5">{{ bitacora.modo_visita }}</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="detail-item-tab">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="bi bi-ticket-perforated text-info fs-4 me-2"></i>
+                                        <label class="text-muted small mb-0 fw-bold">TICKET</label>
+                                    </div>
+                                    <p class="mb-0 fw-semibold fs-5">{{ bitacora.ticket|default:"N/A" }}</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="detail-item-tab">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="bi bi-geo-alt text-info fs-4 me-2"></i>
+                                        <label class="text-muted small mb-0 fw-bold">UBICACIÓN</label>
+                                    </div>
+                                    <p class="mb-0 fw-semibold fs-5">{{ bitacora.ubicacion }}</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="detail-item-tab">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="bi bi-person-check text-info fs-4 me-2"></i>
+                                        <label class="text-muted small mb-0 fw-bold">RESPONSABLE</label>
+                                    </div>
+                                    <p class="mb-0 fw-semibold fs-5">{{ bitacora.responsable }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {% if bitacora.observaciones %}
+                    <div class="tab-pane fade" id="observaciones-{{ bitacora.id }}" role="tabpanel">
+                        
+                        <div class="alert alert-warning border-0 shadow-sm" style="font-size: 1.1rem;">
+                            <i class="bi bi-chat-quote-fill me-2"></i>
+                            <strong>{{ bitacora.observaciones }}</strong>
+                        </div>
+                    </div>
+                    {% endif %}
+
+                </div>
+            </div>
+            <div class="modal-footer border-0 bg-light">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                    <i class="bi bi-x-circle me-2"></i>Cerrar
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %}

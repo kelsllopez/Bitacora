@@ -1,0 +1,115 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botones Centrales</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: rgb(184, 255, 253);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .logo {
+            width: 100px;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            width: 300px;
+            height: 70px;
+            margin: 15px 0;
+            font-size: 20px;
+            font-weight: bold;
+            border: none;
+            border-radius: 35px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn:active {
+            transform: scale(0.98);
+            box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-cream {
+            background-color: #f5e1c8;
+            color: black;
+        }
+
+        .btn-cream:hover {
+            background-color: #e8d4b9;
+        }
+
+        .btn-blue {
+            background-color: #3498db;
+            color: white;
+        }
+
+        .btn-blue:hover {
+            background-color: #2980b9;
+        }
+
+        .btn-green {
+            background-color: #2ecc71;
+            color: white;
+        }
+
+        .btn-green:hover {
+            background-color: #27ae60;
+        }
+
+        .welcome-message {
+            font-size: 26px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .user-greeting {
+            font-size: 22px;
+            color: #3498db;
+            margin-bottom: 20px;
+        }
+    </style>
+    <link rel="icon" href="{% static 'image/logo.png' %}" type="image/png">
+</head>
+<body>
+    <div class="card">
+        <img src="https://media.licdn.com/dms/image/v2/C4E0BAQE6uDTtTgld_A/company-logo_200_200/company-logo_200_200/0/1630598944278/portuaria_corral_s_a_logo?e=2147483647&v=beta&t=gsLaNaQvHyx_b7OJd6kYZc-M7QxSebWK_Loh6uqtyHc" alt="Portuaria Corral Logo" class="logo">
+        <div class="welcome-message">Bienvenidos al menú de Portuaria Corral</div>
+        <div class="user-greeting">Hola, {{ user }}!</div>
+        <button class="btn btn-cream" onclick="window.location.href='{% url 'bitacora_acceso' %}';">Bitácora Interna</button>
+        <button class="btn btn-blue" onclick="window.location.href='{% url 'bitacora_acceso_externo' %}';">Bitácora Externa</button>
+        <button class="btn btn-green" onclick="window.location.href='{% url 'bitacora_report' %}';">Reportes</button>
+        {% if user.is_staff %}
+        <button class="btn btn-yellow" onclick="window.location.href='{% url 'admin:index' %}';">ADMINISTRADOR</button>
+        {% endif %}
+    
+    </div>
+</body>
+</html>

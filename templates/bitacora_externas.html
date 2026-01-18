@@ -1,0 +1,205 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Bitácora Externa{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/bitacora_externa.css' %}">
+
+<div class="decorative-icons">
+    <i class="bi bi-globe-americas"></i>
+    <i class="bi bi-geo-alt"></i>
+</div>
+
+<div class="content-section">
+    <div class="page-header">
+        <div class="d-flex align-items-center justify-content-between">
+            <div>
+                <h2><i class="bi bi-globe"></i> Bitácora Externa</h2>
+                <p class="text-muted mb-0">Registro de salidas y visitas externas</p>
+            </div>
+            <div class="stat-badge">
+                <span class="badge rounded-pill p-3">
+                    <i class="bi bi-signpost-split-fill me-2"></i>
+                    {{ bitacoras.count }} Registros
+                </span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-lg-8">
+            <div class="form-card">
+                <div class="d-flex align-items-center mb-4">
+                    <div class="icon-wrapper me-3">
+                        <i class="bi bi-pencil-square fs-1"></i>
+                    </div>
+                    <div>
+                        <h4 class="mb-1">Registrar Salida/Visita Externa</h4>
+                        <p class="text-muted mb-0">Complete todos los campos requeridos</p>
+                    </div>
+                </div>
+                
+                <form method="post" id="externaForm" class="needs-validation" novalidate>
+                    {% csrf_token %}
+                    
+                    <div class="card mb-4 border-0 bg-light">
+                        <div class="card-body">
+                            <h6 class="card-title text-success mb-3">
+                                <i class="bi bi-calendar-range me-2"></i>Fecha y Horario
+                            </h6>
+                            <div class="row g-3">
+                                <div class="col-md-4">
+                                    <label class="form-label"><i class="bi bi-calendar me-1"></i> Fecha</label>
+                                    {{ form.fecha }}
+                                    <div class="form-text">Seleccione la fecha de la salida</div>
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="form-label"><i class="bi bi-arrow-up-right me-1"></i> Hora Salida</label>
+                                    {{ form.hora_entrada }}
+                                    <div class="form-text">Hora de salida del edificio</div>
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="form-label"><i class="bi bi-arrow-down-left me-1"></i> Hora Retorno</label>
+                                    {{ form.hora_salida }}
+                                    <div class="form-text">Hora estimada de retorno</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card mb-4 border-0 bg-light">
+                        <div class="card-body">
+                            <h6 class="card-title text-success mb-3">
+                                <i class="bi bi-person-walking me-2"></i>Información de la Visita
+                            </h6>
+                            <div class="row g-3">
+                                <div class="col-md-12">
+                                    <label class="form-label"><i class="bi bi-compass me-1"></i> Tipo de Salida</label>
+                                    {{ form.modo_visita }}
+                                    <div class="form-text">Seleccione el tipo de salida</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card mb-4 border-0 bg-light">
+                        <div class="card-body">
+                            <h6 class="card-title text-success mb-3">
+                                <i class="bi bi-info-circle me-2"></i>Información Adicional
+                            </h6>
+
+                            <div class="row g-3 mb-3">
+                                <div class="col-md-6">
+                                    <label class="form-label">
+                                        <i class="bi bi-person-badge me-1"></i> Nombre del Visitante
+                                    </label>
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="bi bi-person"></i></span>
+                                        {{ form.nombre_visitante }}
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label class="form-label">
+                                        <i class="bi bi-ticket-perforated me-1"></i> Ticket (Opcional)
+                                    </label>
+                                    {{ form.ticket }}
+                                    <div class="form-text">Número de ticket o referencia</div>
+                                </div>
+                            </div>
+
+                            <div class="row g-3 mb-3">
+                                <div class="col-md-6">
+                                    <label class="form-label">
+                                        <i class="bi bi-person-check me-1"></i> Responsable
+                                    </label>
+                                    {{ form.responsable }}
+                                    <div class="form-text">Persona a cargo</div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label class="form-label">
+                                        <i class="bi bi-geo-alt-fill me-1"></i> Ubicación de Destino
+                                    </label>
+                                    {{ form.ubicacion }}
+                                    <div class="form-text">Destino de la visita</div>
+                                </div>
+                            </div>
+
+                            <div class="mt-3">
+                                <label class="form-label">
+                                    <i class="bi bi-chat-left-text me-1"></i> Observaciones
+                                </label>
+                                {{ form.observaciones }}
+                                <div class="form-text">Detalles importantes sobre la salida</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-between align-items-center mt-4 pt-4 border-top">
+                        <div>
+                            <span class="text-muted">
+                                <i class="bi bi-exclamation-triangle me-1"></i>
+                                Campos marcados con * son requeridos
+                            </span>
+                        </div>
+                        <div class="btn-group-lg">
+                            <button type="submit" class="btn btn-success px-5" disabled>
+                                <i class="bi bi-send-check me-2"></i> Registrar Salida
+                            </button>
+
+                            <button type="reset" class="btn btn-secondary px-5">
+                                <i class="bi bi-x-circle me-2"></i> Limpiar
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+        <div class="col-lg-4">
+            <div class="info-card">
+                <h5 class="mb-3">
+                    <i class="bi bi-clock-history me-2"></i>Últimos Registros
+                </h5>
+
+                {% for bitacora in bitacoras|slice:":3" %}
+                <div class="recent-item mb-3">
+                    <strong>{{ bitacora.nombre_visitante }} {{ bitacora.apellido_paterno }}</strong>
+                    <div class="text-muted small">
+                        {{ bitacora.fecha|date:"d/m/Y" }} - {{ bitacora.hora_entrada|time:"H:i" }}
+                    </div>
+
+                    <div class="mt-2 text-end">
+                        <button class="btn btn-sm btn-outline-primary"
+                                data-bs-toggle="modal"
+                                data-bs-target="#detalleModal{{ bitacora.id }}">
+                            <i class="bi bi-eye"></i> Ver detalles
+                        </button>
+                    </div>
+                </div>
+                {% empty %}
+                <p class="text-muted text-center">No hay registros</p>
+                {% endfor %}
+
+                {% if bitacoras|length > 3 %}
+                <div class="text-center mt-3">
+                    <a href="{% url 'admin_panel' %}" class="btn btn-primary btn-sm">
+                        <i class="bi bi-arrow-right-circle me-1"></i>
+                        ¿Quieres ver más reportes internos? Aprieta acá
+                    </a>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+{% include 'includes/modal_detalle_bitacoras.htm' %}
+{% block extra_js %}
+<script src="{% static 'js/bitacora_externa.js' %}"></script>
+{% endblock %}
+
+
+{% endblock %}

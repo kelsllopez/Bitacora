@@ -1,0 +1,26 @@
+Performing system checks...
+
+System check identified no issues (0 silenced).
+January 30, 2025 - 10:20:08
+Django version 4.2.17, using settings 'bitacora.settings'
+Starting development server at http://127.0.0.1:4078/
+Quit the server with CTRL-BREAK.
+
+Performing system checks...
+
+System check identified no issues (0 silenced).
+January 30, 2025 - 10:23:22
+Django version 4.2.17, using settings 'bitacora.settings'
+Starting development server at http://127.0.0.1:4078/
+Quit the server with CTRL-BREAK.
+
+Performing system checks...
+
+System check identified no issues (0 silenced).
+January 30, 2025 - 10:33:03
+Django version 4.2.17, using settings 'bitacora.settings'
+Starting development server at http://127.0.0.1:4078/
+Quit the server with CTRL-BREAK.
+
+E:\web\bitacora\bitacora\settings.py:199: SyntaxWarning: invalid escape sequence '\i'
+  "site_logo": "static\image\logo.pngg",  # Ruta dentro del directorio estático

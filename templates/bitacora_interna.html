@@ -1,0 +1,170 @@
+{% extends 'base.html' %}
+{% load static %}  
+{% block title %}Bitácora Interna{% endblock %}
+
+{% block content %}
+    <link rel="stylesheet" href="{% static 'css/bitacora_interna.css' %}">
+
+<div class="decorative-icons">
+    <i class="bi bi-person-check"></i>
+    <i class="bi bi-building"></i>
+</div>
+
+<div class="content-section">
+    <div class="page-header">
+        <div class="d-flex align-items-center justify-content-between">
+            <div>
+                <h2><i class="bi bi-building"></i> Bitácora Interna</h2>
+                <p class="text-muted mb-0">Registro de visitas internas a la oficina</p>
+            </div>
+            <div class="stat-badge">
+                <span class="badge rounded-pill p-3">
+                    <i class="bi bi-people-fill me-2"></i>
+                    {{ bitacoras.count }} Registros
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-8">
+            <div class="form-card">
+                <form method="post" id="internaForm" class="needs-validation" novalidate>
+                    {% csrf_token %}
+
+                    <div class="card mb-4 border-0 bg-light">
+                        <div class="card-body">
+                            <h6 class="card-title text-primary fw-bold mb-3">
+                                <i class="bi bi-calendar-event me-2"></i>Fecha y Horario
+                            </h6>
+                            <div class="row g-3">
+                                <div class="col-md-4">
+                                    <label class="form-label fw-semibold">Fecha <span class="text-danger">*</span></label>
+                                    {{ form.fecha }}
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="form-label fw-semibold">Hora entrada <span class="text-danger">*</span></label>
+                                    {{ form.hora_entrada }}
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="form-label fw-semibold">Hora salida <span class="text-danger">*</span></label>
+                                    {{ form.hora_salida }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card mb-4 border-0 bg-light">
+                        <div class="card-body">
+                            <h6 class="card-title text-primary fw-bold mb-3">
+                                <i class="bi bi-person-badge me-2"></i>Información del Visitante
+                            </h6>
+                            <div class="row g-3">
+                                <div class="col-md-12">
+                                    <label class="form-label fw-semibold">Modo de visita <span class="text-danger">*</span></label>
+                                    {{ form.modo_visita }}
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label fw-semibold">RUT <span class="text-danger">*</span></label>
+                                    {{ form.rut }}
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label fw-semibold">Nombre <span class="text-danger">*</span></label>
+                                    {{ form.nombre_visitante }}
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label fw-semibold">Apellido paterno <span class="text-danger">*</span></label>
+                                    {{ form.apellido_paterno }}
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label fw-semibold">Apellido materno <span class="text-danger">*</span></label>
+                                    {{ form.apellido_materno }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card mb-4 border-0 bg-light">
+                        <div class="card-body">
+                            <h6 class="card-title text-primary fw-bold mb-3">
+                                <i class="bi bi-info-circle me-2"></i>Información Adicional
+                            </h6>
+                            <div class="row g-3">
+                                <div class="col-md-4">
+                                    <label class="form-label fw-semibold">Ticket</label>
+                                    {{ form.ticket }}
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="form-label fw-semibold">Responsable <span class="text-danger">*</span></label>
+                                    {{ form.responsable }}
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="form-label fw-semibold">Ubicación <span class="text-danger">*</span></label>
+                                    {{ form.ubicacion }}
+                                </div>
+                                <div class="col-md-12">
+                                    <label class="form-label fw-semibold">Observaciones <span class="text-danger">*</span></label>
+                                    {{ form.observaciones }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-between align-items-center mt-4">
+                        <small class="text-muted italic"><span class="text-danger">*</span> Campos obligatorios</small>
+                        <div>
+                            <button type="submit" id="submitBtn" class="btn btn-primary px-4" disabled>
+                                <i class="bi bi-save me-2"></i>Registrar
+                            </button>
+                            <button type="reset" class="btn btn-outline-secondary px-4">
+                                <i class="bi bi-x-circle me-2"></i>Limpiar
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="col-lg-4">
+            <div class="info-card">
+                <h5 class="mb-3">
+                    <i class="bi bi-clock-history me-2"></i>Últimos Registros
+                </h5>
+
+                {% for bitacora in bitacoras|slice:":3" %}
+                <div class="recent-item mb-3">
+                    <strong>{{ bitacora.nombre_visitante }} {{ bitacora.apellido_paterno }}</strong>
+                    <div class="text-muted small">
+                        {{ bitacora.fecha|date:"d/m/Y" }} - {{ bitacora.hora_entrada|time:"H:i" }}
+                    </div>
+
+                    <div class="mt-2 text-end">
+                        <button class="btn btn-sm btn-outline-primary"
+                                data-bs-toggle="modal"
+                                data-bs-target="#detalleModal{{ bitacora.id }}">
+                            <i class="bi bi-eye"></i> Ver detalles
+                        </button>
+                    </div>
+                </div>
+                {% empty %}
+                <p class="text-muted text-center">No hay registros</p>
+                {% endfor %}
+
+                {% if bitacoras|length > 3 %}
+                <div class="text-center mt-3">
+                    <a href="{% url 'admin_panel' %}" class="btn btn-primary btn-sm">
+                        <i class="bi bi-arrow-right-circle me-1"></i>
+                        ¿Quieres ver más reportes internos? Aprieta acá
+                    </a>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% include 'includes/modal_detalle_bitacoras.htm' %}
+{% block extra_js %}
+<script src="{% static 'js/bitacora_interna.js' %}"></script>
+{% endblock %}
+
+{% endblock %}

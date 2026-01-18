@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Estilo general */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Encabezado */
+        h1 {
+            color: #007bff;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        p {
+            text-align: center;
+            font-size: 16px;
+            color: #555;
+        }
+
+        /* Tabla */
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            border: 2px solid rgb(0, 255, 68); /* Borde alrededor de la tabla */
+        }
+
+        th, td {
+            text-align: left;
+            padding: 12px;
+            font-size: 14px;
+            color: #333;
+            border: 1px solidrgb(0, 255, 68); /* Borde de cada celda */
+        }
+
+        th {
+            background-color:rgb(0, 255, 68);
+            color: #fff;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #d4edda; /* Verde claro para resaltar */
+        }
+
+        /* Pie de página */
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 12px;
+            color: #888;
+        }
+    </style>
+    <title>Nuevo Acceso Registrado</title>
+</head>
+<body>
+    <h1 id="titulo">Nuevo Acceso Registrado</h1>
+    <p id="descripcion">Se ha registrado un nuevo acceso en la bitácora con los siguientes detalles:</p>
+    <table id="tabla-registro">
+        
+        <tr>
+            <th>ID</th>  <!-- Columna para mostrar el ID del registro -->
+            <th>Campo</th>
+            <th>Valor</th>
+        </tr>
+        <tr id="registro-{{ acceso_id }}"> <!-- Usamos el ID de la bitácora -->
+            <td>{{ acceso_id }}</td>  <!-- Aquí mostramos el ID -->
+            <td>ID de la Bitácora</td>
+            <td>{{ acceso_id }}</td>
+        </tr>
+        {% for key, value in data.items %}
+        <tr id="registro-{{ forloop.counter }}">
+            <td>{{ forloop.counter }}</td>
+            <td>{{ key|capfirst }}</td>
+            <td>{{ value }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <footer id="pie-pagina">
+        Este mensaje es generado automáticamente por el sistema de bitácoras. <br>
+        © 2025 CorralPort - Todos los derechos reservados.
+    </footer>
+</body>
+</html>

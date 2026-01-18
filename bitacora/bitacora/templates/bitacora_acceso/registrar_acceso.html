@@ -1,0 +1,477 @@
+{% extends "base.html" %}
+
+{% block title %}Formulario de Visitas{% endblock %}
+{% load static %}
+
+{% block content %}
+
+<style>
+        /* Fondo general con degradado suave */
+        body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(135deg, #e0f7fa, #b2ebf2);
+        flex-direction: column; /* Asegura que el contenido esté centrado verticalmente */
+    }
+
+
+
+    /* Estilo de la tarjeta principal */
+    .card {
+        background-color: #ffffff;
+        border-radius: 15px;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.1); /* Sombra 3D */
+    }
+
+    .card:hover {
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 10px 30px rgba(0, 0, 0, 0.1); /* Efecto hover 3D */
+    }
+
+    /* Encabezado de la tarjeta con color atractivo */
+    .card-header {
+        background-color: #00796b;
+        color: white;
+        padding: 15px;
+        text-align: center;
+        border-radius: 15px 15px 0 0;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    }
+
+    .card-header h1 {
+        margin: 0;
+    }
+
+    .card-content {
+        padding: 25px;
+    }
+
+    /* Ajuste de las filas del formulario */
+    .form-row {
+        display: flex;
+        gap: 25px;
+        flex-wrap: wrap;
+    }
+
+    /* Estilo de los grupos de formulario */
+    .form-group {
+        flex: 1;
+        min-width: 230px;
+        margin-bottom: 20px;
+    }
+
+
+    /* Estilo del selector de opciones */
+    select option {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    /* Botón de envío con diseño llamativo y efecto 3D */
+    .btn {
+        background-color: #4caf50;
+        border: none;
+        color: white;
+        padding: 15px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 10px 0;
+        cursor: pointer;
+        border-radius: 10px;
+        width: 100%; /* Esto hace que el botón ocupe el 100% del ancho disponible */
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Sombra sutil 3D */
+        transition: all 0.3s ease-in-out;
+    }
+
+    .btn:hover {
+        background-color: #45a049;
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Efecto hover 3D */
+        transform: translateY(-5px);
+    }
+
+    /* Estilo para el contador de tiempo */
+    .time-counter {
+        font-size: 16px;
+        color: white;
+        background: #f44336;
+        border-radius: 25px;
+        padding: 10px 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        font-weight: bold;
+        margin-top: 10px;
+        display: none; /* Lo ocultamos inicialmente */
+
+    }
+
+    .time-counter.visible {
+        display: block;
+    }
+
+    /* Estilo de los botones y la alineación en el encabezado */
+    .button-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        margin-bottom: 30px;
+    }
+
+    .btn-externos, .btn-historia {
+        padding: 12px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        border: none;
+        border-radius: 10px;
+        background-color: #64b5f6;
+        transition: background-color 0.3s, box-shadow 0.3s;
+    }
+
+    .btn-externos:hover {
+        background-color: #42a5f5;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    }
+
+    .btn-historia:hover {
+        background-color: #42a5f5;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Mejorando la legibilidad de los textos de error */
+    .error {
+        color: #d32f2f;
+        font-size: 0.9em;
+    }
+
+    /* Diseño para lista de sugerencias */
+    #suggestions-list {
+        position: absolute;
+        z-index: 1000;
+        background-color: #ffffff;
+        border: 1px solid #ccc;
+        max-height: 200px;
+        overflow-y: auto;
+        width: 100%;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    #suggestions-list li {
+        padding: 12px;
+        cursor: pointer;
+    }
+
+    #suggestions-list li:hover {
+        background-color: #f0f0f0;
+    }
+
+    
+    #search-container {
+        position: relative;
+    }
+    
+    #search-results {
+        max-height: 150px; /* Ajusta la altura máxima según tus necesidades */
+        overflow-y: auto;  /* Agrega desplazamiento vertical si hay demasiados resultados */
+        position: absolute;
+        top: 100%;          /* Coloca la lista justo debajo del campo de búsqueda */
+        left: 0;
+        width: 100%;        /* Asegura que la lista tenga el mismo ancho que el input */
+        background-color: white; /* Para que la lista tenga un fondo blanco */
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Agrega una sombra para que se vea mejor */
+        z-index: 9999;      /* Asegura que la lista se muestre por encima de otros elementos */
+    }
+    
+    #search-results li {
+        padding: 8px;
+        cursor: pointer;
+    }
+    
+    #search-results li:hover {
+        background-color: #ddd;
+    }
+    
+    #no-results-message {
+        color: red;
+        display: none;
+        padding: 5px;
+    }
+    #id_nombre_visitante {
+        min-width: 200px;  /* Ajusta el ancho mínimo según tu diseño */
+    }
+    /* Estilo del contenedor de botones */
+
+</style>
+
+<br>
+<br>
+<div class="buttons-group mt-2 d-flex justify-content-end" id="dropdown-button-group">
+    <div class="dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+            Opciones
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <li><a class="dropdown-item" href="{% url 'menu' %}" id="bitacora-externa">MENU</a></li>
+            <li><a class="dropdown-item" href="{% url 'bitacora_report' %}" id="bitacora-interna">REPORTE</a></li>
+        </ul>
+    </div>
+</div>
+    
+    <div class="card">
+        <div class="card-header">
+            <h1>Registro de Visitas</h1>
+        </div>
+        <div class="card-content">
+            <form method="post" id="visitForm">
+                {% csrf_token %}
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="fecha">Fecha</label>
+                        {{ form.fecha }}
+                    </div>
+                    <div class="form-group">
+                        <label for="hora_entrada">Hora de Entrada</label>
+                        {{ form.hora_entrada }}
+                    </div>
+                    <div class="form-group">
+                        <label for="hora_salida">Hora de Salida</label>
+                        {{ form.hora_salida }}
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="motivo_visita">Motivo de la Visita</label>
+                    {{ form.motivo_visita }}
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="id_nombre_visitante">Nombre Visitante:</label> <!-- Nombre Visitante con el dos puntos -->
+                        <div id="search-container">
+                            <input type="text" id="id_nombre_visitante" name="nombre_visitante" placeholder="Buscar visitante..." class="form-control" oninput="adjustWidth(this)">
+                            <ul id="search-results"></ul>
+                            <p id="no-results-message" style="display:none;">No se encontraron resultados.</p>
+                        </div>
+                    </div>                
+                        
+                
+                    <div class="form-group">
+                        <label for="apellido_paterno">Apellido Paterno</label>
+                        {{ form.apellido_paterno }}
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="apellido_materno">Apellido Materno</label>
+                        {{ form.apellido_materno }}
+                    </div>
+                    <div class="form-group">
+                        <label for="rut">RUT</label>
+                        {{ form.rut }}
+                    </div>
+
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="ticket">Ticket</label>
+                        {{ form.ticket }}
+                    </div>
+                    <div class="form-group">
+                        <label for="responsable">Responsable</label>
+                        {{ form.responsable }}
+                    </div>
+                    <div class="form-group">
+                        <label for="ubicacion">Ubicación</label>
+                        {{ form.ubicacion }}
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="observaciones">Observaciones</label>
+                    {{ form.observaciones }}
+                </div>
+
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            let searchTimeout;
+        
+            $('#id_nombre_visitante').on('input', function () {
+                clearTimeout(searchTimeout);
+        
+                var query = $(this).val().trim();
+                $('#no-results-message').hide();
+        
+                if (query.length >= 3) {
+                    searchTimeout = setTimeout(function () {
+                        $.ajax({
+                            url: "{% url 'bitacora_view' %}",
+                            data: { 'search': query },
+                            dataType: 'json',
+                            success: function (data) {
+                                if (data.results && data.results.length > 0) {
+                                    populateResults(data.results);
+                                } else {
+                                    $('#search-results').empty(); // Limpia resultados previos
+                                    $('#no-results-message').show();
+                                }
+                            },
+                            error: function () {
+                                alert('Hubo un error en la búsqueda.');
+                            }
+                        });
+                    }, 300); // Retardo para evitar solicitudes innecesarias
+                } else {
+                    $('#search-results').empty(); // Limpia resultados si la búsqueda es corta
+                }
+            });
+        
+            function populateResults(results) {
+                $('#search-results').empty();
+                results.forEach(function (item) {
+                    $('#search-results').append(
+                        '<li data-rut="' +
+                            item.rut +
+                            '" data-apellido_paterno="' +
+                            item.apellido_paterno +
+                            '" data-apellido_materno="' +
+                            item.apellido_materno +
+                            '">' +
+                            item.nombre +
+                            '</li>'
+                    );
+                });
+            }
+        
+            $('#search-results').on('click', 'li', function () {
+                var name = $(this).text();
+                var rut = $(this).data('rut');
+                var apellidoPaterno = $(this).data('apellido_paterno');
+                var apellidoMaterno = $(this).data('apellido_materno');
+        
+                $('#id_nombre_visitante').val(name);
+                $('#id_rut').val(rut);
+                $('#id_apellido_paterno').val(apellidoPaterno);
+                $('#id_apellido_materno').val(apellidoMaterno);
+        
+                $('#search-results').empty();
+            });
+            // Temporizador de sesión y otros elementos del formulario
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRFToken': $('input[name="csrfmiddlewaretoken"]').val()
+                }
+            });
+
+            let timeout = null; // Temporizador
+
+            // Establecer el atributo 'max' para la fecha de hoy en el campo 'fecha'
+            let fechaInput = document.querySelector('input[name="fecha"]');
+            let today = new Date().toISOString().split('T')[0];  // Formato de fecha YYYY-MM-DD
+            fechaInput.setAttribute('max', today);  // Establecer el atributo 'max' a la fecha de hoy
+
+            // Obtener la hora actual y establecer el atributo 'max' en los campos de hora
+            let now = new Date();
+            let hours = now.getHours().toString().padStart(2, '0');
+            let minutes = now.getMinutes().toString().padStart(2, '0');
+            let currentTime = hours + ':' + minutes;
+            let horaEntradaInput = document.querySelector('input[name="hora_entrada"]');
+            let horaSalidaInput = document.querySelector('input[name="hora_salida"]');
+            horaEntradaInput.setAttribute('max', currentTime);  // Establecer la hora máxima en 'hora_entrada'
+            horaSalidaInput.setAttribute('max', currentTime);  // Establecer la hora máxima en 'hora_salida'
+
+            // Bloquear las horas futuras en el input cuando se enfoca en los campos de hora
+            horaEntradaInput.addEventListener('focus', function() {
+                let now = new Date();
+                let currentTime = now.getHours().toString().padStart(2, '0') + ":" + now.getMinutes().toString().padStart(2, '0');
+                horaEntradaInput.setAttribute('max', currentTime);  // Establecer el atributo 'max' para hora_entrada
+            });
+
+            horaSalidaInput.addEventListener('focus', function() {
+                let now = new Date();
+                let currentTime = now.getHours().toString().padStart(2, '0') + ":" + now.getMinutes().toString().padStart(2, '0');
+                horaSalidaInput.setAttribute('max', currentTime);  // Establecer el atributo 'max' para hora_salida
+            });
+
+            // Funciones para el temporizador de sesión
+            let seconds = 0;
+            let timer;
+            const timeCounter = document.getElementById('timeCounter');
+            const maxTime = 300; // 5 minutos en segundos (300 segundos)
+
+            // Formatear el tiempo en minutos:segundos
+            function formatTime(seconds) {
+                let minutes = Math.floor(seconds / 60);
+                let remainingSeconds = seconds % 60;
+                if (minutes < 10) { minutes = '0' + minutes; }
+                if (remainingSeconds < 10) { remainingSeconds = '0' + remainingSeconds; }
+                return minutes + ':' + remainingSeconds;
+            }
+
+            // Iniciar el temporizador
+            function startTimer() {
+                timer = setInterval(function() {
+                    seconds++;
+                    timeCounter.textContent = 'Tiempo activo: ' + formatTime(seconds);
+
+                    // Si quedan 60 segundos, mostrar una alerta
+                    if (seconds >= 240 && !timeCounter.classList.contains('visible')) {
+                        timeCounter.classList.add('visible');
+                        Swal.fire({
+                            title: '¡Quedan 60 segundos para que expire el formulario!',
+                            text: 'Por favor, termine el formulario antes de que expire el tiempo.',
+                            icon: 'info',
+                            confirmButtonText: 'Entendido'
+                        });
+                    }
+
+                    // Si el tiempo expira, mostrar una alerta con opción de continuar o redirigir
+                    if (seconds >= maxTime) {
+                        clearInterval(timer);
+                        Swal.fire({
+                            title: '¡El tiempo expiró!',
+                            text: '¿Quieres continuar en esta página o ser redirigido al inicio?',
+                            icon: 'warning',
+                            showCancelButton: true,
+                            confirmButtonText: 'Continuar',
+                            cancelButtonText: 'OK, ir al inicio',
+                        }).then((result) => {
+                            if (result.isConfirmed) {
+                                seconds = 0;
+                                timeCounter.textContent = 'Tiempo activo: ' + formatTime(seconds);
+                                clearInterval(timer);
+                                startTimer();
+                            } else {
+                                window.location.href = "/";
+                            }
+                        });
+                    }
+                }, 1000);
+            }
+
+            startTimer();
+
+            // Restablecer el temporizador cuando se realice cualquier cambio en el formulario
+            document.getElementById('visitForm').addEventListener('input', function() {
+                seconds = 0;
+                timeCounter.textContent = 'Tiempo activo: ' + formatTime(seconds);
+            });
+        });
+        
+    </script>
+
+{% endblock %}

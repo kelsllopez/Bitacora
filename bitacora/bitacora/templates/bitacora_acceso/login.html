@@ -1,0 +1,218 @@
+{% extends "base.html" %}
+{% load static %}  <!-- Esta línea debe ir al principio -->
+
+{% block title %}Iniciar Sesión{% endblock %}
+
+{% block content %}
+    <!-- Incluir archivo CSS -->
+    <link rel="icon" href="{% static 'image/logo.png' %}" type="image/png">
+
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #e0f7fa, #ffffff, #e8f5e9);
+    flex-direction: column;
+}
+
+.container {
+    width: 100%;
+    max-width: 700px; /* Aumento del ancho máximo para tabletas */
+    padding: 30px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.login-card {
+    background-color: rgba(255, 255, 255, 0.95); 
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); 
+    padding: 30px;
+    border: 1px solid #e0e0e0;
+}
+
+.logo-container {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #0277bd;
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+.input-group {
+    margin-bottom: 30px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    color: #0277bd;
+    font-weight: 600;
+}
+
+input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #4fc3f7;
+    border-radius: 10px;
+    font-size: 18px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+input:focus {
+    outline: none;
+    border-color: #0277bd;
+    box-shadow: 0 0 0 3px rgba(2, 119, 189, 0.2);
+}
+
+button {
+    width: 100%;
+    padding: 16px;
+    background: linear-gradient(to right, #4fc3f7, #4caf50);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(to right, #29b6f6, #43a047);
+}
+
+.forgot-password {
+    display: block;
+    text-align: center;
+    margin-top: 30px;
+    color: #0277bd;
+    text-decoration: none;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+.form-errors {
+    color: red;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.alert {
+    color: red;
+    font-size: 16px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Media Queries para pantallas pequeñas (celulares) */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+        flex-direction: column;
+    }
+    
+    .container {
+        padding: 15px;
+    }
+
+    .login-card {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+
+    input, button {
+        font-size: 14px;
+        padding: 12px;
+    }
+
+    .container, .login-card {
+        max-width: 100%;
+    }
+}
+
+/* Media Queries para tabletas */
+@media (min-width: 481px) and (max-width: 1024px) {
+    .container {
+        max-width: 600px; /* Aumento del tamaño máximo para tabletas */
+        padding: 40px;
+    }
+
+    .login-card {
+        padding: 50px;
+    }
+
+    h1 {
+        font-size: 36px; /* Mayor tamaño de fuente para tabletas */
+        margin-bottom: 40px;
+    }
+
+    input, button {
+        font-size: 20px; /* Aumento de tamaño de los inputs y botones */
+        padding: 18px; /* Aumento del padding para mejor comodidad */
+    }
+
+    .container, .login-card {
+        max-width: 100%;
+    }
+}
+
+</style>
+    <div class="container">
+        <div class="login-card">
+            <div class="logo-container">
+                <img src="https://media.licdn.com/dms/image/v2/C4E0BAQE6uDTtTgld_A/company-logo_200_200/company-logo_200_200/0/1630598944278/portuaria_corral_s_a_logo?e=2147483647&v=beta&t=gsLaNaQvHyx_b7OJd6kYZc-M7QxSebWK_Loh6uqtyHc" alt="Portuaria Corral Logo" class="logo">
+            </div>
+            <h1>Iniciar Sesión</h1>
+
+            <form method="POST">
+                {% csrf_token %}
+                
+                <!-- Mostrar errores de validación específicos del formulario -->
+                {% if form.errors %}
+                    <div class="form-errors">
+                        {% for field in form %}
+                            {% for error in field.errors %}
+                                <p>{{ error }}</p>
+                            {% endfor %}
+                        {% endfor %}
+                    </div>
+                {% endif %}
+                
+                <div class="input-group">
+                    <label for="usuario">Usuario</label>
+                    <input type="text" id="usuario" name="usuario" required placeholder="Ingrese su usuario" value="{{ form.usuario.value|default:'' }}">
+                </div>
+                <div class="input-group">
+                    <label for="password">Contraseña</label>
+                    <input type="password" id="password" name="password" placeholder="Ingrese su contraseña" required value="{{ form.password.value|default:'' }}">
+                </div>
+                <button type="submit" id="submit-btn">Iniciar Sesión</button>
+            </form>
+        </div>
+    </div>
+    {% endblock %}

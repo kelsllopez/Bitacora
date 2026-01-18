@@ -1,0 +1,6 @@
+4. Usar el archivo requirements.txt (opcional)
+Si quieres instalar estas mismas librerías en otro entorno, puedes usar el archivo requirements.txt con:
+
+bash
+Copiar código
+pip install -r requirements.txt

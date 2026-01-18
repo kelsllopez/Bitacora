@@ -1,0 +1,2555 @@
+Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\Administrador\AppData\Local\Programs\Python\Python39-32\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Administrador\AppData\Local\Programs\Python\Python39-32\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\web\bitacora\server\views.py", line 146, in login_view
+    return render(request, 'bitacora_acceso/login.html', {'form': form})
+  File "C:\Users\Administrador\AppData\Local\Programs\Python\Python39-32\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Administrador\AppData\Local\Programs\Python\Python39-32\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Administrador\AppData\Local\Programs\Python\Python39-32\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\Users\Administrador\AppData\Local\Programs\Python\Python39-32\lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Users\Administrador\AppData\Local\Programs\Python\Python39-32\lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Users\Administrador\AppData\Local\Programs\Python\Python39-32\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\Administrador\AppData\Local\Programs\Python\Python39-32\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Users\Administrador\AppData\Local\Programs\Python\Python39-32\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\Users\Administrador\AppData\Local\Programs\Python\Python39-32\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\Administrador\AppData\Local\Programs\Python\Python39-32\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\Administrador\AppData\Local\Programs\Python\Python39-32\lib\site-packages\django\template\base.py", line 514, in parse
+    self.extend_nodelist(nodelist, compiled_result, token)
+  File "C:\Users\Administrador\AppData\Local\Programs\Python\Python39-32\lib\site-packages\django\template\base.py", line 531, in extend_nodelist
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: <ExtendsNode: extends "base.html"> must be the first tag in the template.
+"GET / HTTP/1.1" 500 137957
+Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\Administrador\AppData\Local\Programs\Python\Python39-32\lib\site-packages\django\template\base.py", line 505, in parse
+    compile_func = self.tags[command]
+KeyError: 'static'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrador\AppData\Local\Programs\Python\Python39-32\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Administrador\AppData\Local\Programs\Python\Python39-32\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\web\bitacora\server\views.py", line 146, in login_view
+    return render(request, 'bitacora_acceso/login.html', {'form': form})
+  File "C:\Users\Administrador\AppData\Local\Programs\Python\Python39-32\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Administrador\AppData\Local\Programs\Python\Python39-32\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Administrador\AppData\Local\Programs\Python\Python39-32\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\Users\Administrador\AppData\Local\Programs\Python\Python39-32\lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Users\Administrador\AppData\Local\Programs\Python\Python39-32\lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Users\Administrador\AppData\Local\Programs\Python\Python39-32\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\Administrador\AppData\Local\Programs\Python\Python39-32\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Users\Administrador\AppData\Local\Programs\Python\Python39-32\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\Users\Administrador\AppData\Local\Programs\Python\Python39-32\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\Administrador\AppData\Local\Programs\Python\Python39-32\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\Administrador\AppData\Local\Programs\Python\Python39-32\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Users\Administrador\AppData\Local\Programs\Python\Python39-32\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\Administrador\AppData\Local\Programs\Python\Python39-32\lib\site-packages\django\template\loader_tags.py", line 293, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\Administrador\AppData\Local\Programs\Python\Python39-32\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Users\Administrador\AppData\Local\Programs\Python\Python39-32\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\Administrador\AppData\Local\Programs\Python\Python39-32\lib\site-packages\django\template\loader_tags.py", line 232, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "C:\Users\Administrador\AppData\Local\Programs\Python\Python39-32\lib\site-packages\django\template\base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Users\Administrador\AppData\Local\Programs\Python\Python39-32\lib\site-packages\django\template\base.py", line 558, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 7: 'static', expected 'endblock'. Did you forget to register or load this tag?
+"GET / HTTP/1.1" 500 183936
+Internal Server Error: /bitacora_acceso/
+Traceback (most recent call last):
+  File "C:\Users\Administrador\AppData\Local\Programs\Python\Python39-32\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Administrador\AppData\Local\Programs\Python\Python39-32\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Administrador\AppData\Local\Programs\Python\Python39-32\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "E:\web\bitacora\server\views.py", line 55, in bitacora_acceso_view
+    return render(request, 'bitacora_acceso/registrar_acceso.html', {'form': form})
+  File "C:\Users\Administrador\AppData\Local\Programs\Python\Python39-32\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Administrador\AppData\Local\Programs\Python\Python39-32\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Administrador\AppData\Local\Programs\Python\Python39-32\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\Users\Administrador\AppData\Local\Programs\Python\Python39-32\lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Users\Administrador\AppData\Local\Programs\Python\Python39-32\lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Users\Administrador\AppData\Local\Programs\Python\Python39-32\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\Administrador\AppData\Local\Programs\Python\Python39-32\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Users\Administrador\AppData\Local\Programs\Python\Python39-32\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\Users\Administrador\AppData\Local\Programs\Python\Python39-32\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\Administrador\AppData\Local\Programs\Python\Python39-32\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\Administrador\AppData\Local\Programs\Python\Python39-32\lib\site-packages\django\template\base.py", line 514, in parse
+    self.extend_nodelist(nodelist, compiled_result, token)
+  File "C:\Users\Administrador\AppData\Local\Programs\Python\Python39-32\lib\site-packages\django\template\base.py", line 531, in extend_nodelist
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: <ExtendsNode: extends "base.html"> must be the first tag in the template.
+"GET /bitacora_acceso/ HTTP/1.1" 500 151121
+Internal Server Error: /
+Traceback (most recent call last):
+  File "E:\web\bitacora\.env\Lib\site-packages\ldap3\utils\ntlm.py", line 500, in ntowf_v2
+    from Crypto.Hash import MD4  # try with the Crypto library if present
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'Crypto'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\web\bitacora\server\views.py", line 141, in login_view
+    user = backend.authenticate(request, username=username, password=password)
+  File "E:\web\bitacora\server\auth_backends.py", line 47, in authenticate
+    if authenticate_ldap(username, password):
+       ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "E:\web\bitacora\server\auth_backends.py", line 26, in authenticate_ldap
+    if conn.bind():
+       ~~~~~~~~~^^
+  File "E:\web\bitacora\.env\Lib\site-packages\ldap3\core\connection.py", line 628, in bind
+    response = self.do_ntlm_bind(controls)
+  File "E:\web\bitacora\.env\Lib\site-packages\ldap3\core\connection.py", line 1394, in do_ntlm_bind
+    request = bind_operation(self.version, 'SICILY_RESPONSE_NTLM', ntlm_client,
+                             result['server_creds'])
+  File "E:\web\bitacora\.env\Lib\site-packages\ldap3\operation\bind.py", line 81, in bind_operation
+    server_creds = name.create_authenticate_message()
+  File "E:\web\bitacora\.env\Lib\site-packages\ldap3\utils\ntlm.py", line 379, in create_authenticate_message
+    nt_challenge_response = self.compute_nt_response()
+  File "E:\web\bitacora\.env\Lib\site-packages\ldap3\utils\ntlm.py", line 485, in compute_nt_response
+    response_key_nt = self.ntowf_v2()
+  File "E:\web\bitacora\.env\Lib\site-packages\ldap3\utils\ntlm.py", line 503, in ntowf_v2
+    raise e  # raise original exception
+    ^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\ldap3\utils\ntlm.py", line 497, in ntowf_v2
+    password_digest = hashlib.new('MD4', self._password.encode('utf-16-le')).digest()
+                      ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\python13\Lib\hashlib.py", line 166, in __hash_new
+    return __get_builtin_constructor(name)(data)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\python\python13\Lib\hashlib.py", line 123, in __get_builtin_constructor
+    raise ValueError('unsupported hash type ' + name)
+ValueError: unsupported hash type MD4
+"POST / HTTP/1.1" 500 136773
+Internal Server Error: /
+Traceback (most recent call last):
+  File "E:\web\bitacora\.env\Lib\site-packages\ldap3\utils\ntlm.py", line 500, in ntowf_v2
+    from Crypto.Hash import MD4  # try with the Crypto library if present
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'Crypto'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\web\bitacora\server\views.py", line 141, in login_view
+    user = backend.authenticate(request, username=username, password=password)
+  File "E:\web\bitacora\server\auth_backends.py", line 47, in authenticate
+    if authenticate_ldap(username, password):
+       ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "E:\web\bitacora\server\auth_backends.py", line 26, in authenticate_ldap
+    if conn.bind():
+       ~~~~~~~~~^^
+  File "E:\web\bitacora\.env\Lib\site-packages\ldap3\core\connection.py", line 628, in bind
+    response = self.do_ntlm_bind(controls)
+  File "E:\web\bitacora\.env\Lib\site-packages\ldap3\core\connection.py", line 1394, in do_ntlm_bind
+    request = bind_operation(self.version, 'SICILY_RESPONSE_NTLM', ntlm_client,
+                             result['server_creds'])
+  File "E:\web\bitacora\.env\Lib\site-packages\ldap3\operation\bind.py", line 81, in bind_operation
+    server_creds = name.create_authenticate_message()
+  File "E:\web\bitacora\.env\Lib\site-packages\ldap3\utils\ntlm.py", line 379, in create_authenticate_message
+    nt_challenge_response = self.compute_nt_response()
+  File "E:\web\bitacora\.env\Lib\site-packages\ldap3\utils\ntlm.py", line 485, in compute_nt_response
+    response_key_nt = self.ntowf_v2()
+  File "E:\web\bitacora\.env\Lib\site-packages\ldap3\utils\ntlm.py", line 503, in ntowf_v2
+    raise e  # raise original exception
+    ^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\ldap3\utils\ntlm.py", line 497, in ntowf_v2
+    password_digest = hashlib.new('MD4', self._password.encode('utf-16-le')).digest()
+                      ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\python13\Lib\hashlib.py", line 166, in __hash_new
+    return __get_builtin_constructor(name)(data)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\python\python13\Lib\hashlib.py", line 123, in __get_builtin_constructor
+    raise ValueError('unsupported hash type ' + name)
+ValueError: unsupported hash type MD4
+"POST / HTTP/1.1" 500 136767
+Internal Server Error: /
+Traceback (most recent call last):
+  File "E:\web\bitacora\.env\Lib\site-packages\ldap3\utils\ntlm.py", line 500, in ntowf_v2
+    from Crypto.Hash import MD4  # try with the Crypto library if present
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'Crypto'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\web\bitacora\server\views.py", line 141, in login_view
+    user = backend.authenticate(request, username=username, password=password)
+  File "E:\web\bitacora\server\auth_backends.py", line 47, in authenticate
+    if authenticate_ldap(username, password):
+       ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "E:\web\bitacora\server\auth_backends.py", line 26, in authenticate_ldap
+    if conn.bind():
+       ~~~~~~~~~^^
+  File "E:\web\bitacora\.env\Lib\site-packages\ldap3\core\connection.py", line 628, in bind
+    response = self.do_ntlm_bind(controls)
+  File "E:\web\bitacora\.env\Lib\site-packages\ldap3\core\connection.py", line 1394, in do_ntlm_bind
+    request = bind_operation(self.version, 'SICILY_RESPONSE_NTLM', ntlm_client,
+                             result['server_creds'])
+  File "E:\web\bitacora\.env\Lib\site-packages\ldap3\operation\bind.py", line 81, in bind_operation
+    server_creds = name.create_authenticate_message()
+  File "E:\web\bitacora\.env\Lib\site-packages\ldap3\utils\ntlm.py", line 379, in create_authenticate_message
+    nt_challenge_response = self.compute_nt_response()
+  File "E:\web\bitacora\.env\Lib\site-packages\ldap3\utils\ntlm.py", line 485, in compute_nt_response
+    response_key_nt = self.ntowf_v2()
+  File "E:\web\bitacora\.env\Lib\site-packages\ldap3\utils\ntlm.py", line 503, in ntowf_v2
+    raise e  # raise original exception
+    ^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\ldap3\utils\ntlm.py", line 497, in ntowf_v2
+    password_digest = hashlib.new('MD4', self._password.encode('utf-16-le')).digest()
+                      ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\python13\Lib\hashlib.py", line 166, in __hash_new
+    return __get_builtin_constructor(name)(data)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\python\python13\Lib\hashlib.py", line 123, in __get_builtin_constructor
+    raise ValueError('unsupported hash type ' + name)
+ValueError: unsupported hash type MD4
+"POST / HTTP/1.1" 500 136761
+Internal Server Error: /
+Traceback (most recent call last):
+  File "E:\web\bitacora\.env\Lib\site-packages\ldap3\utils\ntlm.py", line 500, in ntowf_v2
+    from Crypto.Hash import MD4  # try with the Crypto library if present
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'Crypto'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\web\bitacora\server\views.py", line 141, in login_view
+    user = backend.authenticate(request, username=username, password=password)
+  File "E:\web\bitacora\server\auth_backends.py", line 47, in authenticate
+    if authenticate_ldap(username, password):
+       ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "E:\web\bitacora\server\auth_backends.py", line 26, in authenticate_ldap
+    if conn.bind():
+       ~~~~~~~~~^^
+  File "E:\web\bitacora\.env\Lib\site-packages\ldap3\core\connection.py", line 628, in bind
+    response = self.do_ntlm_bind(controls)
+  File "E:\web\bitacora\.env\Lib\site-packages\ldap3\core\connection.py", line 1394, in do_ntlm_bind
+    request = bind_operation(self.version, 'SICILY_RESPONSE_NTLM', ntlm_client,
+                             result['server_creds'])
+  File "E:\web\bitacora\.env\Lib\site-packages\ldap3\operation\bind.py", line 81, in bind_operation
+    server_creds = name.create_authenticate_message()
+  File "E:\web\bitacora\.env\Lib\site-packages\ldap3\utils\ntlm.py", line 379, in create_authenticate_message
+    nt_challenge_response = self.compute_nt_response()
+  File "E:\web\bitacora\.env\Lib\site-packages\ldap3\utils\ntlm.py", line 485, in compute_nt_response
+    response_key_nt = self.ntowf_v2()
+  File "E:\web\bitacora\.env\Lib\site-packages\ldap3\utils\ntlm.py", line 503, in ntowf_v2
+    raise e  # raise original exception
+    ^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\ldap3\utils\ntlm.py", line 497, in ntowf_v2
+    password_digest = hashlib.new('MD4', self._password.encode('utf-16-le')).digest()
+                      ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\python13\Lib\hashlib.py", line 166, in __hash_new
+    return __get_builtin_constructor(name)(data)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\python\python13\Lib\hashlib.py", line 123, in __get_builtin_constructor
+    raise ValueError('unsupported hash type ' + name)
+ValueError: unsupported hash type MD4
+"POST / HTTP/1.1" 500 136655
+Internal Server Error: /
+Traceback (most recent call last):
+  File "E:\web\bitacora\.env\Lib\site-packages\ldap3\utils\ntlm.py", line 500, in ntowf_v2
+    from Crypto.Hash import MD4  # try with the Crypto library if present
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'Crypto'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\web\bitacora\server\views.py", line 141, in login_view
+    user = backend.authenticate(request, username=username, password=password)
+  File "E:\web\bitacora\server\auth_backends.py", line 47, in authenticate
+    if authenticate_ldap(username, password):
+       ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "E:\web\bitacora\server\auth_backends.py", line 26, in authenticate_ldap
+    if conn.bind():
+       ~~~~~~~~~^^
+  File "E:\web\bitacora\.env\Lib\site-packages\ldap3\core\connection.py", line 628, in bind
+    response = self.do_ntlm_bind(controls)
+  File "E:\web\bitacora\.env\Lib\site-packages\ldap3\core\connection.py", line 1394, in do_ntlm_bind
+    request = bind_operation(self.version, 'SICILY_RESPONSE_NTLM', ntlm_client,
+                             result['server_creds'])
+  File "E:\web\bitacora\.env\Lib\site-packages\ldap3\operation\bind.py", line 81, in bind_operation
+    server_creds = name.create_authenticate_message()
+  File "E:\web\bitacora\.env\Lib\site-packages\ldap3\utils\ntlm.py", line 379, in create_authenticate_message
+    nt_challenge_response = self.compute_nt_response()
+  File "E:\web\bitacora\.env\Lib\site-packages\ldap3\utils\ntlm.py", line 485, in compute_nt_response
+    response_key_nt = self.ntowf_v2()
+  File "E:\web\bitacora\.env\Lib\site-packages\ldap3\utils\ntlm.py", line 503, in ntowf_v2
+    raise e  # raise original exception
+    ^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\ldap3\utils\ntlm.py", line 497, in ntowf_v2
+    password_digest = hashlib.new('MD4', self._password.encode('utf-16-le')).digest()
+                      ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\python13\Lib\hashlib.py", line 166, in __hash_new
+    return __get_builtin_constructor(name)(data)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\python\python13\Lib\hashlib.py", line 123, in __get_builtin_constructor
+    raise ValueError('unsupported hash type ' + name)
+ValueError: unsupported hash type MD4
+"POST / HTTP/1.1" 500 136728
+Internal Server Error: /
+Traceback (most recent call last):
+  File "E:\web\bitacora\.env\Lib\site-packages\ldap3\utils\ntlm.py", line 500, in ntowf_v2
+    from Crypto.Hash import MD4  # try with the Crypto library if present
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'Crypto'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\web\bitacora\server\views.py", line 141, in login_view
+    user = backend.authenticate(request, username=username, password=password)
+  File "E:\web\bitacora\server\auth_backends.py", line 47, in authenticate
+    if authenticate_ldap(username, password):
+       ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "E:\web\bitacora\server\auth_backends.py", line 26, in authenticate_ldap
+    if conn.bind():
+       ~~~~~~~~~^^
+  File "E:\web\bitacora\.env\Lib\site-packages\ldap3\core\connection.py", line 628, in bind
+    response = self.do_ntlm_bind(controls)
+  File "E:\web\bitacora\.env\Lib\site-packages\ldap3\core\connection.py", line 1394, in do_ntlm_bind
+    request = bind_operation(self.version, 'SICILY_RESPONSE_NTLM', ntlm_client,
+                             result['server_creds'])
+  File "E:\web\bitacora\.env\Lib\site-packages\ldap3\operation\bind.py", line 81, in bind_operation
+    server_creds = name.create_authenticate_message()
+  File "E:\web\bitacora\.env\Lib\site-packages\ldap3\utils\ntlm.py", line 379, in create_authenticate_message
+    nt_challenge_response = self.compute_nt_response()
+  File "E:\web\bitacora\.env\Lib\site-packages\ldap3\utils\ntlm.py", line 485, in compute_nt_response
+    response_key_nt = self.ntowf_v2()
+  File "E:\web\bitacora\.env\Lib\site-packages\ldap3\utils\ntlm.py", line 503, in ntowf_v2
+    raise e  # raise original exception
+    ^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\ldap3\utils\ntlm.py", line 497, in ntowf_v2
+    password_digest = hashlib.new('MD4', self._password.encode('utf-16-le')).digest()
+                      ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\python13\Lib\hashlib.py", line 166, in __hash_new
+    return __get_builtin_constructor(name)(data)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\python\python13\Lib\hashlib.py", line 123, in __get_builtin_constructor
+    raise ValueError('unsupported hash type ' + name)
+ValueError: unsupported hash type MD4
+"POST / HTTP/1.1" 500 136727
+Internal Server Error: /
+Traceback (most recent call last):
+  File "E:\web\bitacora\.env\Lib\site-packages\ldap3\utils\ntlm.py", line 500, in ntowf_v2
+    from Crypto.Hash import MD4  # try with the Crypto library if present
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'Crypto'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\web\bitacora\server\views.py", line 141, in login_view
+    user = backend.authenticate(request, username=username, password=password)
+  File "E:\web\bitacora\server\auth_backends.py", line 47, in authenticate
+    if authenticate_ldap(username, password):
+       ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "E:\web\bitacora\server\auth_backends.py", line 26, in authenticate_ldap
+    if conn.bind():
+       ~~~~~~~~~^^
+  File "E:\web\bitacora\.env\Lib\site-packages\ldap3\core\connection.py", line 628, in bind
+    response = self.do_ntlm_bind(controls)
+  File "E:\web\bitacora\.env\Lib\site-packages\ldap3\core\connection.py", line 1394, in do_ntlm_bind
+    request = bind_operation(self.version, 'SICILY_RESPONSE_NTLM', ntlm_client,
+                             result['server_creds'])
+  File "E:\web\bitacora\.env\Lib\site-packages\ldap3\operation\bind.py", line 81, in bind_operation
+    server_creds = name.create_authenticate_message()
+  File "E:\web\bitacora\.env\Lib\site-packages\ldap3\utils\ntlm.py", line 379, in create_authenticate_message
+    nt_challenge_response = self.compute_nt_response()
+  File "E:\web\bitacora\.env\Lib\site-packages\ldap3\utils\ntlm.py", line 485, in compute_nt_response
+    response_key_nt = self.ntowf_v2()
+  File "E:\web\bitacora\.env\Lib\site-packages\ldap3\utils\ntlm.py", line 503, in ntowf_v2
+    raise e  # raise original exception
+    ^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\ldap3\utils\ntlm.py", line 497, in ntowf_v2
+    password_digest = hashlib.new('MD4', self._password.encode('utf-16-le')).digest()
+                      ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\python13\Lib\hashlib.py", line 166, in __hash_new
+    return __get_builtin_constructor(name)(data)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\python\python13\Lib\hashlib.py", line 123, in __get_builtin_constructor
+    raise ValueError('unsupported hash type ' + name)
+ValueError: unsupported hash type MD4
+"POST / HTTP/1.1" 500 136720
+Internal Server Error: /bitacora_acceso/
+Traceback (most recent call last):
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "E:\web\bitacora\server\views.py", line 64, in bitacora_acceso_view
+    return render(request, 'bitacora_acceso/registrar_acceso.html', {'form': form})
+  File "E:\web\bitacora\.env\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'bitacora_report' not found. 'bitacora_report' is not a valid view function or pattern name.
+"GET /bitacora_acceso/ HTTP/1.1" 500 168315
+Invalid HTTP_HOST header: '192.168.0.5:81'. You may need to add '192.168.0.5' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+  File "E:\web\bitacora\.env\Lib\site-packages\django\http\request.py", line 150, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '192.168.0.5:81'. You may need to add '192.168.0.5' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '192.168.0.5:81'. You may need to add '192.168.0.5' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+  File "E:\web\bitacora\.env\Lib\site-packages\django\http\request.py", line 150, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '192.168.0.5:81'. You may need to add '192.168.0.5' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '192.168.0.5:81'. You may need to add '192.168.0.5' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+  File "E:\web\bitacora\.env\Lib\site-packages\django\http\request.py", line 150, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '192.168.0.5:81'. You may need to add '192.168.0.5' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '192.168.0.5:81'. You may need to add '192.168.0.5' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+  File "E:\web\bitacora\.env\Lib\site-packages\django\http\request.py", line 150, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '192.168.0.5:81'. You may need to add '192.168.0.5' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '192.168.0.5:81'. You may need to add '192.168.0.5' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+  File "E:\web\bitacora\.env\Lib\site-packages\django\http\request.py", line 150, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '192.168.0.5:81'. You may need to add '192.168.0.5' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '192.168.0.5:81'. You may need to add '192.168.0.5' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+  File "E:\web\bitacora\.env\Lib\site-packages\django\http\request.py", line 150, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '192.168.0.5:81'. You may need to add '192.168.0.5' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '192.168.0.5:81'. You may need to add '192.168.0.5' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+  File "E:\web\bitacora\.env\Lib\site-packages\django\http\request.py", line 150, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '192.168.0.5:81'. You may need to add '192.168.0.5' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '192.168.0.5:81'. You may need to add '192.168.0.5' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+  File "E:\web\bitacora\.env\Lib\site-packages\django\http\request.py", line 150, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '192.168.0.5:81'. You may need to add '192.168.0.5' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '192.168.0.5:81'. You may need to add '192.168.0.5' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+  File "E:\web\bitacora\.env\Lib\site-packages\django\http\request.py", line 150, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '192.168.0.5:81'. You may need to add '192.168.0.5' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '192.168.0.5:81'. You may need to add '192.168.0.5' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+  File "E:\web\bitacora\.env\Lib\site-packages\django\http\request.py", line 150, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '192.168.0.5:81'. You may need to add '192.168.0.5' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '192.168.0.5:81'. You may need to add '192.168.0.5' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+  File "E:\web\bitacora\.env\Lib\site-packages\django\http\request.py", line 150, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '192.168.0.5:81'. You may need to add '192.168.0.5' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '192.168.0.5:81'. You may need to add '192.168.0.5' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+  File "E:\web\bitacora\.env\Lib\site-packages\django\http\request.py", line 150, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '192.168.0.5:81'. You may need to add '192.168.0.5' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '192.168.0.5:81'. You may need to add '192.168.0.5' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+  File "E:\web\bitacora\.env\Lib\site-packages\django\http\request.py", line 150, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '192.168.0.5:81'. You may need to add '192.168.0.5' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '192.168.0.5:81'. You may need to add '192.168.0.5' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+  File "E:\web\bitacora\.env\Lib\site-packages\django\http\request.py", line 150, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '192.168.0.5:81'. You may need to add '192.168.0.5' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '192.168.0.5:81'. You may need to add '192.168.0.5' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+  File "E:\web\bitacora\.env\Lib\site-packages\django\http\request.py", line 150, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '192.168.0.5:81'. You may need to add '192.168.0.5' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '192.168.0.5:81'. You may need to add '192.168.0.5' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+  File "E:\web\bitacora\.env\Lib\site-packages\django\http\request.py", line 150, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '192.168.0.5:81'. You may need to add '192.168.0.5' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '192.168.0.5:81'. You may need to add '192.168.0.5' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+  File "E:\web\bitacora\.env\Lib\site-packages\django\http\request.py", line 150, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '192.168.0.5:81'. You may need to add '192.168.0.5' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '192.168.0.5:81'. You may need to add '192.168.0.5' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+  File "E:\web\bitacora\.env\Lib\site-packages\django\http\request.py", line 150, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '192.168.0.5:81'. You may need to add '192.168.0.5' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '192.168.0.5:81'. You may need to add '192.168.0.5' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+  File "E:\web\bitacora\.env\Lib\site-packages\django\http\request.py", line 150, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '192.168.0.5:81'. You may need to add '192.168.0.5' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '192.168.0.5:81'. You may need to add '192.168.0.5' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+  File "E:\web\bitacora\.env\Lib\site-packages\django\http\request.py", line 150, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '192.168.0.5:81'. You may need to add '192.168.0.5' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '192.168.0.5:81'. You may need to add '192.168.0.5' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+  File "E:\web\bitacora\.env\Lib\site-packages\django\http\request.py", line 150, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '192.168.0.5:81'. You may need to add '192.168.0.5' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+  File "E:\web\bitacora\.env\Lib\site-packages\django\http\request.py", line 150, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+  File "E:\web\bitacora\.env\Lib\site-packages\django\http\request.py", line 150, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+  File "E:\web\bitacora\.env\Lib\site-packages\django\http\request.py", line 150, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+  File "E:\web\bitacora\.env\Lib\site-packages\django\http\request.py", line 150, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+  File "E:\web\bitacora\.env\Lib\site-packages\django\http\request.py", line 150, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+  File "E:\web\bitacora\.env\Lib\site-packages\django\http\request.py", line 150, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+  File "E:\web\bitacora\.env\Lib\site-packages\django\http\request.py", line 150, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+  File "E:\web\bitacora\.env\Lib\site-packages\django\http\request.py", line 150, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+  File "E:\web\bitacora\.env\Lib\site-packages\django\http\request.py", line 150, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+  File "E:\web\bitacora\.env\Lib\site-packages\django\http\request.py", line 150, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Internal Server Error: /
+Traceback (most recent call last):
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\contrib\auth\decorators.py", line 25, in _wrapper_view
+    resolved_login_url = resolve_url(login_url or settings.LOGIN_URL)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\shortcuts.py", line 145, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'login' not found. 'login' is not a valid view function or pattern name.
+"GET / HTTP/1.1" 500 145
+Internal Server Error: /
+Traceback (most recent call last):
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\contrib\auth\decorators.py", line 25, in _wrapper_view
+    resolved_login_url = resolve_url(login_url or settings.LOGIN_URL)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\shortcuts.py", line 145, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'login' not found. 'login' is not a valid view function or pattern name.
+"GET / HTTP/1.1" 500 145
+Internal Server Error: /
+Traceback (most recent call last):
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\contrib\auth\decorators.py", line 25, in _wrapper_view
+    resolved_login_url = resolve_url(login_url or settings.LOGIN_URL)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\shortcuts.py", line 145, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'login' not found. 'login' is not a valid view function or pattern name.
+"GET / HTTP/1.1" 500 145
+Internal Server Error: /
+Traceback (most recent call last):
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\contrib\auth\decorators.py", line 25, in _wrapper_view
+    resolved_login_url = resolve_url(login_url or settings.LOGIN_URL)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\shortcuts.py", line 145, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'login' not found. 'login' is not a valid view function or pattern name.
+"GET / HTTP/1.1" 500 145
+Internal Server Error: /
+Traceback (most recent call last):
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\contrib\auth\decorators.py", line 25, in _wrapper_view
+    resolved_login_url = resolve_url(login_url or settings.LOGIN_URL)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\shortcuts.py", line 145, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'login' not found. 'login' is not a valid view function or pattern name.
+"GET / HTTP/1.1" 500 145
+Internal Server Error: /
+Traceback (most recent call last):
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\web\bitacora\server\views.py", line 127, in login_view
+    return render(request, 'bitacora_acceso/login.html', {'form': form})
+  File "E:\web\bitacora\.env\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\templatetags\static.py", line 116, in render
+    url = self.url(context)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\templatetags\static.py", line 113, in url
+    return self.handle_simple(path)
+           ~~~~~~~~~~~~~~~~~~^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\templatetags\static.py", line 129, in handle_simple
+    return staticfiles_storage.url(path)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\contrib\staticfiles\storage.py", line 203, in url
+    return self._url(self.stored_name, name, force)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\contrib\staticfiles\storage.py", line 182, in _url
+    hashed_name = hashed_name_func(*args)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\contrib\staticfiles\storage.py", line 513, in stored_name
+    raise ValueError(
+        "Missing staticfiles manifest entry for '%s'" % clean_name
+    )
+ValueError: Missing staticfiles manifest entry for 'image/logo.png'
+"GET / HTTP/1.1" 500 145
+Internal Server Error: /
+Traceback (most recent call last):
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\web\bitacora\server\views.py", line 127, in login_view
+    return render(request, 'bitacora_acceso/login.html', {'form': form})
+  File "E:\web\bitacora\.env\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\templatetags\static.py", line 116, in render
+    url = self.url(context)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\templatetags\static.py", line 113, in url
+    return self.handle_simple(path)
+           ~~~~~~~~~~~~~~~~~~^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\templatetags\static.py", line 129, in handle_simple
+    return staticfiles_storage.url(path)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\contrib\staticfiles\storage.py", line 203, in url
+    return self._url(self.stored_name, name, force)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\contrib\staticfiles\storage.py", line 182, in _url
+    hashed_name = hashed_name_func(*args)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\contrib\staticfiles\storage.py", line 513, in stored_name
+    raise ValueError(
+        "Missing staticfiles manifest entry for '%s'" % clean_name
+    )
+ValueError: Missing staticfiles manifest entry for 'image/logo.png'
+"GET / HTTP/1.1" 500 145
+Internal Server Error: /
+Traceback (most recent call last):
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\web\bitacora\server\views.py", line 127, in login_view
+    return render(request, 'bitacora_acceso/login.html', {'form': form})
+  File "E:\web\bitacora\.env\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\templatetags\static.py", line 116, in render
+    url = self.url(context)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\templatetags\static.py", line 113, in url
+    return self.handle_simple(path)
+           ~~~~~~~~~~~~~~~~~~^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\templatetags\static.py", line 129, in handle_simple
+    return staticfiles_storage.url(path)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\contrib\staticfiles\storage.py", line 203, in url
+    return self._url(self.stored_name, name, force)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\contrib\staticfiles\storage.py", line 182, in _url
+    hashed_name = hashed_name_func(*args)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\contrib\staticfiles\storage.py", line 513, in stored_name
+    raise ValueError(
+        "Missing staticfiles manifest entry for '%s'" % clean_name
+    )
+ValueError: Missing staticfiles manifest entry for 'image/logo.png'
+"GET / HTTP/1.1" 500 145
+Internal Server Error: /
+Traceback (most recent call last):
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\web\bitacora\server\views.py", line 127, in login_view
+    return render(request, 'bitacora_acceso/login.html', {'form': form})
+  File "E:\web\bitacora\.env\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\templatetags\static.py", line 116, in render
+    url = self.url(context)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\templatetags\static.py", line 113, in url
+    return self.handle_simple(path)
+           ~~~~~~~~~~~~~~~~~~^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\templatetags\static.py", line 129, in handle_simple
+    return staticfiles_storage.url(path)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\contrib\staticfiles\storage.py", line 203, in url
+    return self._url(self.stored_name, name, force)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\contrib\staticfiles\storage.py", line 182, in _url
+    hashed_name = hashed_name_func(*args)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\contrib\staticfiles\storage.py", line 513, in stored_name
+    raise ValueError(
+        "Missing staticfiles manifest entry for '%s'" % clean_name
+    )
+ValueError: Missing staticfiles manifest entry for 'image/logo.png'
+"GET / HTTP/1.1" 500 145
+Internal Server Error: /
+Traceback (most recent call last):
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\web\bitacora\server\views.py", line 127, in login_view
+    return render(request, 'bitacora_acceso/login.html', {'form': form})
+  File "E:\web\bitacora\.env\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\templatetags\static.py", line 116, in render
+    url = self.url(context)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\templatetags\static.py", line 113, in url
+    return self.handle_simple(path)
+           ~~~~~~~~~~~~~~~~~~^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\templatetags\static.py", line 129, in handle_simple
+    return staticfiles_storage.url(path)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\contrib\staticfiles\storage.py", line 203, in url
+    return self._url(self.stored_name, name, force)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\contrib\staticfiles\storage.py", line 182, in _url
+    hashed_name = hashed_name_func(*args)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\contrib\staticfiles\storage.py", line 513, in stored_name
+    raise ValueError(
+        "Missing staticfiles manifest entry for '%s'" % clean_name
+    )
+ValueError: Missing staticfiles manifest entry for 'image/logo.png'
+"GET / HTTP/1.1" 500 145
+Internal Server Error: /
+Traceback (most recent call last):
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\web\bitacora\server\views.py", line 127, in login_view
+    return render(request, 'bitacora_acceso/login.html', {'form': form})
+  File "E:\web\bitacora\.env\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\templatetags\static.py", line 116, in render
+    url = self.url(context)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\templatetags\static.py", line 113, in url
+    return self.handle_simple(path)
+           ~~~~~~~~~~~~~~~~~~^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\templatetags\static.py", line 129, in handle_simple
+    return staticfiles_storage.url(path)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\contrib\staticfiles\storage.py", line 203, in url
+    return self._url(self.stored_name, name, force)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\contrib\staticfiles\storage.py", line 182, in _url
+    hashed_name = hashed_name_func(*args)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\contrib\staticfiles\storage.py", line 513, in stored_name
+    raise ValueError(
+        "Missing staticfiles manifest entry for '%s'" % clean_name
+    )
+ValueError: Missing staticfiles manifest entry for 'image/logo.png'
+"GET / HTTP/1.1" 500 145
+Internal Server Error: /
+Traceback (most recent call last):
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\web\bitacora\server\views.py", line 127, in login_view
+    return render(request, 'bitacora_acceso/login.html', {'form': form})
+  File "E:\web\bitacora\.env\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\templatetags\static.py", line 116, in render
+    url = self.url(context)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\templatetags\static.py", line 113, in url
+    return self.handle_simple(path)
+           ~~~~~~~~~~~~~~~~~~^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\templatetags\static.py", line 129, in handle_simple
+    return staticfiles_storage.url(path)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\contrib\staticfiles\storage.py", line 203, in url
+    return self._url(self.stored_name, name, force)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\contrib\staticfiles\storage.py", line 182, in _url
+    hashed_name = hashed_name_func(*args)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\contrib\staticfiles\storage.py", line 513, in stored_name
+    raise ValueError(
+        "Missing staticfiles manifest entry for '%s'" % clean_name
+    )
+ValueError: Missing staticfiles manifest entry for 'image/logo.png'
+"GET / HTTP/1.1" 500 145
+Internal Server Error: /
+Traceback (most recent call last):
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\web\bitacora\server\views.py", line 127, in login_view
+    return render(request, 'bitacora_acceso/login.html', {'form': form})
+  File "E:\web\bitacora\.env\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\templatetags\static.py", line 116, in render
+    url = self.url(context)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\templatetags\static.py", line 113, in url
+    return self.handle_simple(path)
+           ~~~~~~~~~~~~~~~~~~^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\templatetags\static.py", line 129, in handle_simple
+    return staticfiles_storage.url(path)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\contrib\staticfiles\storage.py", line 203, in url
+    return self._url(self.stored_name, name, force)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\contrib\staticfiles\storage.py", line 182, in _url
+    hashed_name = hashed_name_func(*args)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\contrib\staticfiles\storage.py", line 513, in stored_name
+    raise ValueError(
+        "Missing staticfiles manifest entry for '%s'" % clean_name
+    )
+ValueError: Missing staticfiles manifest entry for 'image/logo.png'
+"GET / HTTP/1.1" 500 145
+Internal Server Error: /
+Traceback (most recent call last):
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\web\bitacora\server\views.py", line 127, in login_view
+    return render(request, 'bitacora_acceso/login.html', {'form': form})
+  File "E:\web\bitacora\.env\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\templatetags\static.py", line 116, in render
+    url = self.url(context)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\templatetags\static.py", line 113, in url
+    return self.handle_simple(path)
+           ~~~~~~~~~~~~~~~~~~^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\templatetags\static.py", line 129, in handle_simple
+    return staticfiles_storage.url(path)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\contrib\staticfiles\storage.py", line 203, in url
+    return self._url(self.stored_name, name, force)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\contrib\staticfiles\storage.py", line 182, in _url
+    hashed_name = hashed_name_func(*args)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\contrib\staticfiles\storage.py", line 513, in stored_name
+    raise ValueError(
+        "Missing staticfiles manifest entry for '%s'" % clean_name
+    )
+ValueError: Missing staticfiles manifest entry for 'image/logo.png'
+"GET / HTTP/1.1" 500 145
+Internal Server Error: /
+Traceback (most recent call last):
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\web\bitacora\server\views.py", line 127, in login_view
+    return render(request, 'bitacora_acceso/login.html', {'form': form})
+  File "E:\web\bitacora\.env\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\templatetags\static.py", line 116, in render
+    url = self.url(context)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\templatetags\static.py", line 113, in url
+    return self.handle_simple(path)
+           ~~~~~~~~~~~~~~~~~~^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\templatetags\static.py", line 129, in handle_simple
+    return staticfiles_storage.url(path)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\contrib\staticfiles\storage.py", line 203, in url
+    return self._url(self.stored_name, name, force)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\contrib\staticfiles\storage.py", line 182, in _url
+    hashed_name = hashed_name_func(*args)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\contrib\staticfiles\storage.py", line 513, in stored_name
+    raise ValueError(
+        "Missing staticfiles manifest entry for '%s'" % clean_name
+    )
+ValueError: Missing staticfiles manifest entry for 'image/logo.png'
+"GET / HTTP/1.1" 500 145
+Internal Server Error: /
+Traceback (most recent call last):
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\web\bitacora\server\views.py", line 127, in login_view
+    return render(request, 'bitacora_acceso/login.html', {'form': form})
+  File "E:\web\bitacora\.env\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\templatetags\static.py", line 116, in render
+    url = self.url(context)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\templatetags\static.py", line 113, in url
+    return self.handle_simple(path)
+           ~~~~~~~~~~~~~~~~~~^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\templatetags\static.py", line 129, in handle_simple
+    return staticfiles_storage.url(path)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\contrib\staticfiles\storage.py", line 203, in url
+    return self._url(self.stored_name, name, force)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\contrib\staticfiles\storage.py", line 182, in _url
+    hashed_name = hashed_name_func(*args)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\contrib\staticfiles\storage.py", line 513, in stored_name
+    raise ValueError(
+        "Missing staticfiles manifest entry for '%s'" % clean_name
+    )
+ValueError: Missing staticfiles manifest entry for 'image/logo.png'
+"GET / HTTP/1.1" 500 145
+Internal Server Error: /
+Traceback (most recent call last):
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\web\bitacora\server\views.py", line 127, in login_view
+    return render(request, 'bitacora_acceso/login.html', {'form': form})
+  File "E:\web\bitacora\.env\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\templatetags\static.py", line 116, in render
+    url = self.url(context)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\templatetags\static.py", line 113, in url
+    return self.handle_simple(path)
+           ~~~~~~~~~~~~~~~~~~^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\templatetags\static.py", line 129, in handle_simple
+    return staticfiles_storage.url(path)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\contrib\staticfiles\storage.py", line 203, in url
+    return self._url(self.stored_name, name, force)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\contrib\staticfiles\storage.py", line 182, in _url
+    hashed_name = hashed_name_func(*args)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\contrib\staticfiles\storage.py", line 513, in stored_name
+    raise ValueError(
+        "Missing staticfiles manifest entry for '%s'" % clean_name
+    )
+ValueError: Missing staticfiles manifest entry for 'image/logo.png'
+"GET / HTTP/1.1" 500 145
+Internal Server Error: /
+Traceback (most recent call last):
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\web\bitacora\server\views.py", line 127, in login_view
+    return render(request, 'bitacora_acceso/login.html', {'form': form})
+  File "E:\web\bitacora\.env\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\templatetags\static.py", line 116, in render
+    url = self.url(context)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\templatetags\static.py", line 113, in url
+    return self.handle_simple(path)
+           ~~~~~~~~~~~~~~~~~~^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\templatetags\static.py", line 129, in handle_simple
+    return staticfiles_storage.url(path)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\contrib\staticfiles\storage.py", line 203, in url
+    return self._url(self.stored_name, name, force)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\contrib\staticfiles\storage.py", line 182, in _url
+    hashed_name = hashed_name_func(*args)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\contrib\staticfiles\storage.py", line 513, in stored_name
+    raise ValueError(
+        "Missing staticfiles manifest entry for '%s'" % clean_name
+    )
+ValueError: Missing staticfiles manifest entry for 'image/logo.png'
+"GET / HTTP/1.1" 500 145
+Internal Server Error: /
+Traceback (most recent call last):
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\web\bitacora\server\views.py", line 127, in login_view
+    return render(request, 'bitacora_acceso/login.html', {'form': form})
+  File "E:\web\bitacora\.env\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\templatetags\static.py", line 116, in render
+    url = self.url(context)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\templatetags\static.py", line 113, in url
+    return self.handle_simple(path)
+           ~~~~~~~~~~~~~~~~~~^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\templatetags\static.py", line 129, in handle_simple
+    return staticfiles_storage.url(path)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\contrib\staticfiles\storage.py", line 203, in url
+    return self._url(self.stored_name, name, force)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\contrib\staticfiles\storage.py", line 182, in _url
+    hashed_name = hashed_name_func(*args)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\contrib\staticfiles\storage.py", line 513, in stored_name
+    raise ValueError(
+        "Missing staticfiles manifest entry for '%s'" % clean_name
+    )
+ValueError: Missing staticfiles manifest entry for 'image/logo.png'
+"GET / HTTP/1.1" 500 145
+Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+  File "E:\web\bitacora\.env\Lib\site-packages\django\http\request.py", line 150, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+  File "E:\web\bitacora\.env\Lib\site-packages\django\http\request.py", line 150, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+  File "E:\web\bitacora\.env\Lib\site-packages\django\http\request.py", line 150, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+  File "E:\web\bitacora\.env\Lib\site-packages\django\http\request.py", line 150, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+  File "E:\web\bitacora\.env\Lib\site-packages\django\http\request.py", line 150, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+  File "E:\web\bitacora\.env\Lib\site-packages\django\http\request.py", line 150, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+  File "E:\web\bitacora\.env\Lib\site-packages\django\http\request.py", line 150, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+  File "E:\web\bitacora\.env\Lib\site-packages\django\http\request.py", line 150, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+  File "E:\web\bitacora\.env\Lib\site-packages\django\http\request.py", line 150, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+  File "E:\web\bitacora\.env\Lib\site-packages\django\http\request.py", line 150, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+  File "E:\web\bitacora\.env\Lib\site-packages\django\http\request.py", line 150, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+  File "E:\web\bitacora\.env\Lib\site-packages\django\http\request.py", line 150, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+  File "E:\web\bitacora\.env\Lib\site-packages\django\http\request.py", line 150, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+  File "E:\web\bitacora\.env\Lib\site-packages\django\http\request.py", line 150, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Internal Server Error: /bitacora_report/
+Traceback (most recent call last):
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\web\bitacora\server\views.py", line 243, in bitacora_report
+    return render(request, 'bitacora_acceso/bitacora_report.html', {
+        'bitacora_acceso': bitacora_acceso,
+    ...<8 lines>...
+        'total_general': total_general,
+    })
+  File "E:\web\bitacora\.env\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: bitacora_acceso/bitacora_report.html
+"GET /bitacora_report/ HTTP/1.1" 500 145
+Internal Server Error: /bitacora_report/
+Traceback (most recent call last):
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\web\bitacora\server\views.py", line 243, in bitacora_report
+    return render(request, 'bitacora_acceso/bitacora_report.html', {
+        'bitacora_acceso': bitacora_acceso,
+    ...<8 lines>...
+        'total_general': total_general,
+    })
+  File "E:\web\bitacora\.env\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: bitacora_acceso/bitacora_report.html
+"GET /bitacora_report/ HTTP/1.1" 500 145
+Internal Server Error: /admin/login/
+Traceback (most recent call last):
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+           ~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\templatetags\static.py", line 116, in render
+    url = self.url(context)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\templatetags\static.py", line 113, in url
+    return self.handle_simple(path)
+           ~~~~~~~~~~~~~~~~~~^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\templatetags\static.py", line 129, in handle_simple
+    return staticfiles_storage.url(path)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\contrib\staticfiles\storage.py", line 203, in url
+    return self._url(self.stored_name, name, force)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\contrib\staticfiles\storage.py", line 182, in _url
+    hashed_name = hashed_name_func(*args)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\contrib\staticfiles\storage.py", line 513, in stored_name
+    raise ValueError(
+        "Missing staticfiles manifest entry for '%s'" % clean_name
+    )
+ValueError: Missing staticfiles manifest entry for 'static/css/custom_admin.css'
+"GET /admin/login/?next=/admin/ HTTP/1.1" 500 145
+Internal Server Error: /menu/
+Traceback (most recent call last):
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\web\bitacora\server\views.py", line 135, in menu
+    return render(request, 'bitacora_acceso/menu.html')
+  File "E:\web\bitacora\.env\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\templatetags\static.py", line 116, in render
+    url = self.url(context)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\templatetags\static.py", line 113, in url
+    return self.handle_simple(path)
+           ~~~~~~~~~~~~~~~~~~^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\templatetags\static.py", line 129, in handle_simple
+    return staticfiles_storage.url(path)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\contrib\staticfiles\storage.py", line 203, in url
+    return self._url(self.stored_name, name, force)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\contrib\staticfiles\storage.py", line 182, in _url
+    hashed_name = hashed_name_func(*args)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\contrib\staticfiles\storage.py", line 513, in stored_name
+    raise ValueError(
+        "Missing staticfiles manifest entry for '%s'" % clean_name
+    )
+ValueError: Missing staticfiles manifest entry for 'image/logo.png'
+"GET /menu/ HTTP/1.1" 500 145
+Internal Server Error: /
+Traceback (most recent call last):
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\web\bitacora\server\views.py", line 127, in login_view
+    return render(request, 'bitacora_acceso/login.html', {'form': form})
+  File "E:\web\bitacora\.env\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\templatetags\static.py", line 116, in render
+    url = self.url(context)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\templatetags\static.py", line 113, in url
+    return self.handle_simple(path)
+           ~~~~~~~~~~~~~~~~~~^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\templatetags\static.py", line 129, in handle_simple
+    return staticfiles_storage.url(path)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\contrib\staticfiles\storage.py", line 203, in url
+    return self._url(self.stored_name, name, force)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\contrib\staticfiles\storage.py", line 182, in _url
+    hashed_name = hashed_name_func(*args)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\contrib\staticfiles\storage.py", line 513, in stored_name
+    raise ValueError(
+        "Missing staticfiles manifest entry for '%s'" % clean_name
+    )
+ValueError: Missing staticfiles manifest entry for 'image/logo.png'
+"GET / HTTP/1.1" 500 145
+Internal Server Error: /bitacora_report/
+Traceback (most recent call last):
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "E:\web\bitacora\server\views.py", line 246, in bitacora_report
+        'bitacora_acceso': bitacora_acceso,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<10 lines>...
+    
+    
+  File "E:\web\bitacora\.env\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+        contents,
+    ...<2 lines>...
+        self.engine,
+    )
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+           ~~~~~~~~~~~~^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\defaulttags.py", line 853, in do_for
+    nodelist_loop = parser.parse(
+        (
+    ...<2 lines>...
+        )
+    )
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 484, in parse
+    raise self.error(token, e)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 482, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 600, in compile_filter
+    return FilterExpression(token, self)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 703, in __init__
+    raise TemplateSyntaxError(
+    ...<2 lines>...
+    )
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: ':5' from 'bitacora.motivo_visita:5'
+"GET /bitacora_report/ HTTP/1.1" 500 145
+Internal Server Error: /bitacora_report/
+Traceback (most recent call last):
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "E:\web\bitacora\server\views.py", line 246, in bitacora_report
+        'bitacora_acceso': bitacora_acceso,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<10 lines>...
+    
+    
+  File "E:\web\bitacora\.env\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+        contents,
+    ...<2 lines>...
+        self.engine,
+    )
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+           ~~~~~~~~~~~~^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\defaulttags.py", line 853, in do_for
+    nodelist_loop = parser.parse(
+        (
+    ...<2 lines>...
+        )
+    )
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 484, in parse
+    raise self.error(token, e)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 482, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 600, in compile_filter
+    return FilterExpression(token, self)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 703, in __init__
+    raise TemplateSyntaxError(
+    ...<2 lines>...
+    )
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: ':5' from 'bitacora.motivo_visita:5'
+"GET /bitacora_report/ HTTP/1.1" 500 145
+Internal Server Error: /menu/
+Traceback (most recent call last):
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\web\bitacora\server\views.py", line 136, in menu
+    return render(request, 'bitacora_acceso/menu.html')
+  File "E:\web\bitacora\.env\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'admin' not found. 'admin' is not a valid view function or pattern name.
+"GET /menu/ HTTP/1.1" 500 145
+Internal Server Error: /menu/
+Traceback (most recent call last):
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\web\bitacora\server\views.py", line 136, in menu
+    return render(request, 'bitacora_acceso/menu.html')
+  File "E:\web\bitacora\.env\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "E:\web\bitacora\.env\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\web\bitacora\.env\Lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'admin' not found. 'admin' is not a valid view function or pattern name.
+"GET /menu/ HTTP/1.1" 500 145
+Internal Server Error: /bitacora_report/
+Traceback (most recent call last):
+  File "C:\Users\katal\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\smartif.py", line 179, in translate_token
+    op = OPERATORS[token]
+KeyError: 'request.GET.filter-tipo'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\katal\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\katal\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\katal\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\katal\OneDrive\Escritorio\bitacora\bitacora\server\views.py", line 202, in bitacora_report
+    return render(request, 'bitacora_acceso/bitacora_report.html', {
+  File "C:\Users\katal\AppData\Local\Programs\Python\Python39\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\katal\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\katal\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\Users\katal\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Users\katal\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Users\katal\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\katal\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Users\katal\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\Users\katal\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\katal\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\katal\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Users\katal\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\katal\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\defaulttags.py", line 952, in do_if
+    condition = TemplateIfParser(parser, bits).parse()
+  File "C:\Users\katal\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\defaulttags.py", line 885, in __init__
+    super().__init__(*args, **kwargs)
+  File "C:\Users\katal\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\smartif.py", line 170, in __init__
+    mapped_tokens.append(self.translate_token(token))
+  File "C:\Users\katal\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\smartif.py", line 181, in translate_token
+    return self.create_var(token)
+  File "C:\Users\katal\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\defaulttags.py", line 888, in create_var
+    return TemplateLiteral(self.template_parser.compile_filter(value), value)
+  File "C:\Users\katal\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 600, in compile_filter
+    return FilterExpression(token, self)
+  File "C:\Users\katal\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 703, in __init__
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: '-tipo' from 'request.GET.filter-tipo'
+"GET /bitacora_report/ HTTP/1.1" 500 145
+Internal Server Error: /bitacora_report/
+Traceback (most recent call last):
+  File "C:\Users\katal\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\smartif.py", line 179, in translate_token
+    op = OPERATORS[token]
+KeyError: 'request.GET.filter-tipo'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\katal\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\katal\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\katal\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\katal\OneDrive\Escritorio\bitacora\bitacora\server\views.py", line 202, in bitacora_report
+    return render(request, 'bitacora_acceso/bitacora_report.html', {
+  File "C:\Users\katal\AppData\Local\Programs\Python\Python39\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\katal\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\katal\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\Users\katal\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Users\katal\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Users\katal\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\katal\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Users\katal\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\Users\katal\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\katal\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\katal\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Users\katal\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\katal\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\defaulttags.py", line 952, in do_if
+    condition = TemplateIfParser(parser, bits).parse()
+  File "C:\Users\katal\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\defaulttags.py", line 885, in __init__
+    super().__init__(*args, **kwargs)
+  File "C:\Users\katal\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\smartif.py", line 170, in __init__
+    mapped_tokens.append(self.translate_token(token))
+  File "C:\Users\katal\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\smartif.py", line 181, in translate_token
+    return self.create_var(token)
+  File "C:\Users\katal\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\defaulttags.py", line 888, in create_var
+    return TemplateLiteral(self.template_parser.compile_filter(value), value)
+  File "C:\Users\katal\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 600, in compile_filter
+    return FilterExpression(token, self)
+  File "C:\Users\katal\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 703, in __init__
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: '-tipo' from 'request.GET.filter-tipo'
+"GET /bitacora_report/ HTTP/1.1" 500 145
+Internal Server Error: /bitacora_report/
+Traceback (most recent call last):
+  File "C:\Users\katal\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\smartif.py", line 179, in translate_token
+    op = OPERATORS[token]
+KeyError: 'request.GET.filter-tipo'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\katal\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\katal\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\katal\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\katal\OneDrive\Escritorio\bitacora\bitacora\server\views.py", line 202, in bitacora_report
+    return render(request, 'bitacora_acceso/bitacora_report.html', {
+  File "C:\Users\katal\AppData\Local\Programs\Python\Python39\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\katal\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\katal\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\Users\katal\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Users\katal\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Users\katal\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\katal\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Users\katal\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\Users\katal\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\katal\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\katal\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Users\katal\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\katal\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\defaulttags.py", line 952, in do_if
+    condition = TemplateIfParser(parser, bits).parse()
+  File "C:\Users\katal\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\defaulttags.py", line 885, in __init__
+    super().__init__(*args, **kwargs)
+  File "C:\Users\katal\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\smartif.py", line 170, in __init__
+    mapped_tokens.append(self.translate_token(token))
+  File "C:\Users\katal\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\smartif.py", line 181, in translate_token
+    return self.create_var(token)
+  File "C:\Users\katal\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\defaulttags.py", line 888, in create_var
+    return TemplateLiteral(self.template_parser.compile_filter(value), value)
+  File "C:\Users\katal\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 600, in compile_filter
+    return FilterExpression(token, self)
+  File "C:\Users\katal\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 703, in __init__
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: '-tipo' from 'request.GET.filter-tipo'
+"GET /bitacora_report/ HTTP/1.1" 500 145
+Internal Server Error: /bitacora_report/
+Traceback (most recent call last):
+  File "C:\Users\katal\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\smartif.py", line 179, in translate_token
+    op = OPERATORS[token]
+KeyError: 'request.GET.filter-tipo'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\katal\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\katal\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\katal\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\katal\OneDrive\Escritorio\bitacora\bitacora\server\views.py", line 202, in bitacora_report
+    return render(request, 'bitacora_acceso/bitacora_report.html', {
+  File "C:\Users\katal\AppData\Local\Programs\Python\Python39\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\katal\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\katal\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\Users\katal\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Users\katal\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Users\katal\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\katal\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Users\katal\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\Users\katal\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\katal\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\katal\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Users\katal\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\katal\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\defaulttags.py", line 952, in do_if
+    condition = TemplateIfParser(parser, bits).parse()
+  File "C:\Users\katal\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\defaulttags.py", line 885, in __init__
+    super().__init__(*args, **kwargs)
+  File "C:\Users\katal\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\smartif.py", line 170, in __init__
+    mapped_tokens.append(self.translate_token(token))
+  File "C:\Users\katal\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\smartif.py", line 181, in translate_token
+    return self.create_var(token)
+  File "C:\Users\katal\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\defaulttags.py", line 888, in create_var
+    return TemplateLiteral(self.template_parser.compile_filter(value), value)
+  File "C:\Users\katal\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 600, in compile_filter
+    return FilterExpression(token, self)
+  File "C:\Users\katal\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 703, in __init__
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: '-tipo' from 'request.GET.filter-tipo'
+"GET /bitacora_report/ HTTP/1.1" 500 227302

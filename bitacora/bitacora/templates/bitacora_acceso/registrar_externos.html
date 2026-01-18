@@ -1,0 +1,425 @@
+{% extends "base.html" %}
+
+{% block title %}Formulario de Visitas{% endblock %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/acceso.css' %}">
+<link rel="icon" href="{% static 'image/logo.png' %}" type="image/png">
+
+<style>
+            /* Fondo general con degradado suave */
+            body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #e0f7fa, #b2ebf2);
+            flex-direction: column; /* Asegura que el contenido esté centrado verticalmente */
+        }
+
+    /* Estilo de la tarjeta principal */
+    .card {
+        background-color: #ffffff;
+        border-radius: 15px;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.1); /* Sombra 3D */
+    }
+
+    .card:hover {
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 10px 30px rgba(0, 0, 0, 0.1); /* Efecto hover 3D */
+    }
+
+    /* Encabezado de la tarjeta con color atractivo */
+    .card-header {
+        background-color: #00796b;
+        color: white;
+        padding: 15px;
+        text-align: center;
+        border-radius: 15px 15px 0 0;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    }
+
+    .card-header h1 {
+        margin: 0;
+    }
+
+    .card-content {
+        padding: 25px;
+    }
+
+        /* Ajuste de las filas del formulario */
+        .form-row {
+            display: flex;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        /* Estilo de los grupos de formulario */
+        .form-group {
+            flex: 1;
+            min-width: 230px;
+            margin-bottom: 20px;
+        }
+
+        /* Estilo para campos de entrada */
+        input, textarea, select {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            box-sizing: border-box;
+            font-size: 14px;
+            transition: border-color 0.3s ease;
+        }
+
+        input:focus, textarea:focus, select:focus {
+            border-color: #00796b;
+            box-shadow: 0 0 10px rgba(0, 151, 136, 0.2);
+        }
+
+        /* Estilo del selector de opciones */
+        select option {
+            padding: 12px;
+            font-size: 14px;
+        }
+
+        /* Estilo del área de texto */
+        textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        /* Botón de envío con diseño llamativo y efecto 3D */
+        .btn {
+            background-color: #4caf50;
+            border: none;
+            color: white;
+            padding: 15px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 10px 0;
+            cursor: pointer;
+            border-radius: 10px;
+            width: 100%; /* Esto hace que el botón ocupe el 100% del ancho disponible */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Sombra sutil 3D */
+            transition: all 0.3s ease-in-out;
+        }
+
+        .btn:hover {
+            background-color: #45a049;
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Efecto hover 3D */
+            transform: translateY(-5px);
+        }
+
+        /* Estilo para el contador de tiempo */
+        .time-counter {
+            font-size: 16px;
+            color: white;
+            background: #f44336;
+            border-radius: 25px;
+            padding: 10px 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            font-weight: bold;
+            margin-top: 10px;
+            display: none; /* Lo ocultamos inicialmente */
+
+        }
+
+        .time-counter.visible {
+            display: block;
+        }
+
+        /* Estilo de los botones y la alineación en el encabezado */
+        .button-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .btn-externos, .btn-historia {
+            padding: 12px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 10px;
+            background-color: #64b5f6;
+            transition: background-color 0.3s, box-shadow 0.3s;
+        }
+
+        .btn-externos:hover {
+            background-color: #42a5f5;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn-historia:hover {
+            background-color: #42a5f5;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Mejorando la legibilidad de los textos de error */
+        .error {
+            color: #d32f2f;
+            font-size: 0.9em;
+        }
+
+        /* Diseño para lista de sugerencias */
+        #suggestions-list {
+            position: absolute;
+            z-index: 1000;
+            background-color: #ffffff;
+            border: 1px solid #ccc;
+            max-height: 200px;
+            overflow-y: auto;
+            width: 100%;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        #suggestions-list li {
+            padding: 12px;
+            cursor: pointer;
+        }
+
+        #suggestions-list li:hover {
+            background-color: #f0f0f0;
+        }
+
+    /* Estilo del contenedor de botones */
+    #dropdown-button-group {
+        margin-top: 20px;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+    }
+
+    /* Botón del dropdown con efecto 3D */
+    #dropdownMenuButton {
+        background-color: #4caf50; /* Verde llamativo */
+        border: none;
+        color: white;
+        padding: 12px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 8px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s ease-in-out;
+    }
+
+    #dropdownMenuButton:hover {
+        background-color: #45a049;
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+        transform: translateY(-3px);
+    }
+
+    /* Estilo del menú desplegable */
+    .dropdown-menu {
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Estilo de los elementos del menú */
+    .dropdown-item {
+        font-size: 14px;
+        color: #333;
+        padding: 10px 15px;
+        transition: background-color 0.3s ease-in-out;
+    }
+
+    .dropdown-item:hover {
+        background-color: #f0f0f0;
+    }
+</style>
+
+<br>
+<br>
+<div class="buttons-group mt-3 d-flex justify-content-end" id="dropdown-button-group">
+    <div class="dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+            Opciones
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <li><a class="dropdown-item" href="{% url 'menu' %}" id="bitacora-externa">MENU</a></li>
+            <li><a class="dropdown-item" href="{% url 'bitacora_report' %}" id="bitacora-interna">REPORTE</a></li>
+        </ul>
+    </div>
+</div>
+    
+    <div class="button-container">
+        <div class="time-counter" id="timeCounter">Tiempo activo: 0 segundos</div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <h1>Registro de Visitas</h1>
+        </div>
+        <div class="card-content">
+            <form method="post" id="visitForm">
+                {% csrf_token %}
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="fecha">Fecha</label>
+                        {{ form.fecha }}
+                    </div>
+                    <div class="form-group">
+                        <label for="hora_entrada">Hora de Entrada</label>
+                        {{ form.hora_entrada }}
+                    </div>
+                    <div class="form-group">
+                        <label for="hora_salida">Hora de Salida</label>
+                        {{ form.hora_salida }}
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="motivo_visita">Motivo de la Visita</label>
+                    {{ form.motivo_visita }}
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="nombre_visitante">nombre visitante</label>
+                        {{ form.nombre_visitante }}
+                    </div>          
+
+                    <div class="form-group">
+                        <label for="ticket">Ticket</label>
+                        {{ form.ticket }}
+                    </div>
+                    <div class="form-group">
+                        <label for="responsable">Responsable</label>
+                        {{ form.responsable }}
+                    </div>
+                    <div class="form-group">
+                        <label for="ubicacion">Ubicación</label>
+                        {{ form.ubicacion }}
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="observaciones">Observaciones</label>
+                    {{ form.observaciones }}
+                </div>
+
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+          
+            // Temporizador de sesión y otros elementos del formulario
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRFToken': $('input[name="csrfmiddlewaretoken"]').val()
+                }
+            });
+
+            let timeout = null; // Temporizador
+
+            // Establecer el atributo 'max' para la fecha de hoy en el campo 'fecha'
+            let fechaInput = document.querySelector('input[name="fecha"]');
+            let today = new Date().toISOString().split('T')[0];  // Formato de fecha YYYY-MM-DD
+            fechaInput.setAttribute('max', today);  // Establecer el atributo 'max' a la fecha de hoy
+
+            // Obtener la hora actual y establecer el atributo 'max' en los campos de hora
+            let now = new Date();
+            let hours = now.getHours().toString().padStart(2, '0');
+            let minutes = now.getMinutes().toString().padStart(2, '0');
+            let currentTime = hours + ':' + minutes;
+            let horaEntradaInput = document.querySelector('input[name="hora_entrada"]');
+            let horaSalidaInput = document.querySelector('input[name="hora_salida"]');
+            horaEntradaInput.setAttribute('max', currentTime);  // Establecer la hora máxima en 'hora_entrada'
+            horaSalidaInput.setAttribute('max', currentTime);  // Establecer la hora máxima en 'hora_salida'
+
+            // Bloquear las horas futuras en el input cuando se enfoca en los campos de hora
+            horaEntradaInput.addEventListener('focus', function() {
+                let now = new Date();
+                let currentTime = now.getHours().toString().padStart(2, '0') + ":" + now.getMinutes().toString().padStart(2, '0');
+                horaEntradaInput.setAttribute('max', currentTime);  // Establecer el atributo 'max' para hora_entrada
+            });
+
+            horaSalidaInput.addEventListener('focus', function() {
+                let now = new Date();
+                let currentTime = now.getHours().toString().padStart(2, '0') + ":" + now.getMinutes().toString().padStart(2, '0');
+                horaSalidaInput.setAttribute('max', currentTime);  // Establecer el atributo 'max' para hora_salida
+            });
+
+            // Funciones para el temporizador de sesión
+            let seconds = 0;
+            let timer;
+            const timeCounter = document.getElementById('timeCounter');
+            const maxTime = 300; // 5 minutos en segundos (300 segundos)
+
+            // Formatear el tiempo en minutos:segundos
+            function formatTime(seconds) {
+                let minutes = Math.floor(seconds / 60);
+                let remainingSeconds = seconds % 60;
+                if (minutes < 10) { minutes = '0' + minutes; }
+                if (remainingSeconds < 10) { remainingSeconds = '0' + remainingSeconds; }
+                return minutes + ':' + remainingSeconds;
+            }
+
+            // Iniciar el temporizador
+            function startTimer() {
+                timer = setInterval(function() {
+                    seconds++;
+                    timeCounter.textContent = 'Tiempo activo: ' + formatTime(seconds);
+
+                    // Si quedan 60 segundos, mostrar una alerta
+                    if (seconds >= 240 && !timeCounter.classList.contains('visible')) {
+                        timeCounter.classList.add('visible');
+                        Swal.fire({
+                            title: '¡Quedan 60 segundos para que expire el formulario!',
+                            text: 'Por favor, termine el formulario antes de que expire el tiempo.',
+                            icon: 'info',
+                            confirmButtonText: 'Entendido'
+                        });
+                    }
+
+                    // Si el tiempo expira, mostrar una alerta con opción de continuar o redirigir
+                    if (seconds >= maxTime) {
+                        clearInterval(timer);
+                        Swal.fire({
+                            title: '¡El tiempo expiró!',
+                            text: '¿Quieres continuar en esta página o ser redirigido al inicio?',
+                            icon: 'warning',
+                            showCancelButton: true,
+                            confirmButtonText: 'Continuar',
+                            cancelButtonText: 'OK, ir al inicio',
+                        }).then((result) => {
+                            if (result.isConfirmed) {
+                                seconds = 0;
+                                timeCounter.textContent = 'Tiempo activo: ' + formatTime(seconds);
+                                clearInterval(timer);
+                                startTimer();
+                            } else {
+                                window.location.href = "/";
+                            }
+                        });
+                    }
+                }, 1000);
+            }
+
+            startTimer();
+
+            // Restablecer el temporizador cuando se realice cualquier cambio en el formulario
+            document.getElementById('visitForm').addEventListener('input', function() {
+                seconds = 0;
+                timeCounter.textContent = 'Tiempo activo: ' + formatTime(seconds);
+            });
+        });
+        
+    </script>
+
+{% endblock %}

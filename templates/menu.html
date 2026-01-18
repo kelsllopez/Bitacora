@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% block title %}Menú Principal - Bitácora{% endblock %}
+
+{% block content %}
+{% load static %}
+
+<br>
+<div class="menu-container">
+    <div class="welcome-section">
+        <h1 class="welcome-title">
+            <i class="bi bi-person-workspace"></i> Bienvenido, {{ user.username }}
+        </h1>
+        <p class="welcome-subtitle">Selecciona una opción para continuar</p>
+    </div>
+    
+    <div class="row g-4 mt-3">
+        <div class="col-md-4">
+            <a href="{% url 'bitacora_interna' %}" class="menu-card">
+                <div class="menu-icon bg-primary">
+                    <i class="bi bi-building"></i>
+                </div>
+                <h3>BITÁCORA INTERNA</h3>
+                <p>Registra visitas internas con información completa del visitante</p>
+                <div class="menu-footer">
+                    <span>Ingresar <i class="bi bi-arrow-right"></i></span>
+                </div>
+            </a>
+        </div>
+        
+        <div class="col-md-4">
+            <a href="{% url 'bitacora_externa' %}" class="menu-card">
+                <div class="menu-icon bg-success">
+                    <i class="bi bi-globe"></i>
+                </div>
+                <h3>BITÁCORA EXTERNA</h3>
+                <p>Registra salidas y visitas externas del personal</p>
+                <div class="menu-footer">
+                    <span>Ingresar <i class="bi bi-arrow-right"></i></span>
+                </div>
+            </a>
+        </div>
+        
+        <div class="col-md-4">
+            <a href="{% url 'admin_panel' %}" class="menu-card">
+                <div class="menu-icon bg-info">
+                    <i class="bi bi-file-earmark-bar-graph"></i>
+                </div>
+                <h3>REPORTES</h3>
+                <p>Consulta y filtra todas las bitácoras registradas</p>
+                <div class="menu-footer">
+                    <span>Ver Reportes <i class="bi bi-arrow-right"></i></span>
+                </div>
+            </a>
+        </div>
+    </div>
+    <br>
+    
+</div>
+<script src="{% static 'js/menu.js' %}"></script>
+
+{% endblock %}

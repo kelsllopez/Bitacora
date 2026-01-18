@@ -1,0 +1,6 @@
+E:\web\bitacora\bitacora\settings.py:200: SyntaxWarning: invalid escape sequence '\l'
+  "site_logo": "image\logo.png",  # Ruta dentro del directorio estático
+E:\web\bitacora\bitacora\settings.py:203: SyntaxWarning: invalid escape sequence '\l'
+  "login_logo": "image\logo.png",  # Logo en la página de inicio de sesión
+E:\web\bitacora\bitacora\settings.py:204: SyntaxWarning: invalid escape sequence '\l'
+  "login_logo_dark": "image\logo.png",  # Logo en temas oscuros

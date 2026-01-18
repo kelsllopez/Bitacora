@@ -1,0 +1,14 @@
+Performing system checks...
+
+System check identified no issues (0 silenced).
+January 31, 2025 - 12:15:23
+Django version 4.2.17, using settings 'bitacora.settings'
+Starting development server at http://127.0.0.1:13900/
+Quit the server with CTRL-BREAK.
+
+E:\web\bitacora\bitacora\settings.py:200: SyntaxWarning: invalid escape sequence '\l'
+  "site_logo": "image\logo.png",  # Ruta dentro del directorio estático
+E:\web\bitacora\bitacora\settings.py:203: SyntaxWarning: invalid escape sequence '\l'
+  "login_logo": "image\logo.png",  # Logo en la página de inicio de sesión
+E:\web\bitacora\bitacora\settings.py:204: SyntaxWarning: invalid escape sequence '\l'
+  "login_logo_dark": "image\logo.png",  # Logo en temas oscuros

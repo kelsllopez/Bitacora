@@ -1,0 +1,78 @@
+Performing system checks...
+
+System check identified no issues (0 silenced).
+January 31, 2025 - 09:32:52
+Django version 4.2.17, using settings 'bitacora.settings'
+Starting development server at http://127.0.0.1:14819/
+Quit the server with CTRL-BREAK.
+
+Performing system checks...
+
+System check identified no issues (0 silenced).
+January 31, 2025 - 09:35:15
+Django version 4.2.17, using settings 'bitacora.settings'
+Starting development server at http://127.0.0.1:14819/
+Quit the server with CTRL-BREAK.
+
+Performing system checks...
+
+System check identified no issues (0 silenced).
+January 31, 2025 - 09:59:03
+Django version 4.2.17, using settings 'bitacora.settings'
+Starting development server at http://127.0.0.1:14819/
+Quit the server with CTRL-BREAK.
+
+Performing system checks...
+
+System check identified no issues (0 silenced).
+January 31, 2025 - 10:11:51
+Django version 4.2.17, using settings 'bitacora.settings'
+Starting development server at http://127.0.0.1:14819/
+Quit the server with CTRL-BREAK.
+
+Performing system checks...
+
+System check identified no issues (0 silenced).
+January 31, 2025 - 10:15:26
+Django version 4.2.17, using settings 'bitacora.settings'
+Starting development server at http://127.0.0.1:14819/
+Quit the server with CTRL-BREAK.
+
+Performing system checks...
+
+System check identified no issues (0 silenced).
+January 31, 2025 - 11:50:37
+Django version 4.2.17, using settings 'bitacora.settings'
+Starting development server at http://127.0.0.1:14819/
+Quit the server with CTRL-BREAK.
+
+Performing system checks...
+
+System check identified no issues (0 silenced).
+January 31, 2025 - 11:51:37
+Django version 4.2.17, using settings 'bitacora.settings'
+Starting development server at http://127.0.0.1:14819/
+Quit the server with CTRL-BREAK.
+
+Performing system checks...
+
+System check identified no issues (0 silenced).
+January 31, 2025 - 12:12:55
+Django version 4.2.17, using settings 'bitacora.settings'
+Starting development server at http://127.0.0.1:14819/
+Quit the server with CTRL-BREAK.
+
+E:\web\bitacora\bitacora\settings.py:200: SyntaxWarning: invalid escape sequence '\l'
+  "site_logo": "image\logo.png",  # Ruta dentro del directorio estático
+E:\web\bitacora\bitacora\settings.py:203: SyntaxWarning: invalid escape sequence '\l'
+  "login_logo": "image\logo.png",  # Logo en la página de inicio de sesión
+E:\web\bitacora\bitacora\settings.py:204: SyntaxWarning: invalid escape sequence '\l'
+  "login_logo_dark": "image\logo.png",  # Logo en temas oscuros
+Performing system checks...
+
+System check identified no issues (0 silenced).
+January 31, 2025 - 12:24:53
+Django version 4.2.17, using settings 'bitacora.settings'
+Starting development server at http://127.0.0.1:14819/
+Quit the server with CTRL-BREAK.
+
